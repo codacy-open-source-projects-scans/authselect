@@ -1,16 +1,8 @@
-Local users only for minimal installations
-==========================================
+Local users only
+================
 
 Selecting this profile will enable local files as the source of identity
 and authentication providers.
-
-This profile can be used on systems that require minimal installation to
-save disk and memory space. It serves only local users and groups directly
-from system files instead of going through other authentication providers.
-Therefore SSSD, winbind and fprintd packages can be safely removed.
-
-Unless this system has strict memory and disk constraints, it is recommended
-to keep SSSD running and use 'sssd' profile to avoid functional limitations.
 
 AVAILABLE OPTIONAL FEATURES
 ---------------------------
@@ -25,6 +17,24 @@ with-mkhomedir::
 
 with-ecryptfs::
     Enable automatic per-user ecryptfs.
+
+with-fingerprint::
+    Enable authentication with fingerprint reader through *pam_fprintd*.
+
+with-pam-gnome-keyring::
+    Enable pam-gnome-keyring support.
+
+with-pam-u2f::
+    Enable authentication via u2f dongle through *pam_u2f*.
+
+with-pam-u2f-2fa::
+    Enable 2nd factor authentication via u2f dongle through *pam_u2f*.
+
+without-pam-u2f-nouserok::
+    Module argument nouserok is omitted if also with-pam-u2f-2fa is used.
+    *WARNING*: Omitting nouserok argument means that users without pam-u2f
+    authentication configured will not be able to log in *INCLUDING* root.
+    Make sure you are able to log in before losing root privileges.
 
 with-silent-lastlog::
     Do not produce pam_lastlog message during login.
@@ -47,15 +57,19 @@ with-mdns6::
 with-systemd-homed::
     If set, pam_systemd_homed is enabled for all pam operations.
 
+with-libvirt::
+    Enable connecting to libvirt VMs using the hostname configured in the
+    guest OS or, as a fallback, their name.
+
 without-nullok::
     Do not add nullok parameter to pam_unix.
 
 EXAMPLES
 --------
 
-* Enable minimal profile
+* Enable local profile
 
-  authselect select minimal
+  authselect select local
 
 SEE ALSO
 --------
