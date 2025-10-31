@@ -1,0 +1,1308 @@
+# Geert Warrink <geert.warrink@onsnet.nu>, 2018. #zanata, 2020.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2019. #zanata, 2020.
+# Maarten <maarten@posteo.de>, 2023.
+# Vanhoorne Michael <michaeltjevanhoorne@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-07-31 10:54+0200\n"
+"PO-Revision-Date: 2023-04-02 20:20+0000\n"
+"Last-Translator: Maarten <maarten@posteo.de>\n"
+"Language-Team: Dutch <https://translate.fedoraproject.org/projects/"
+"authselect/master-authselect8adoc/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.2\n"
+
+#. type: Title =
+#: src/man/authselect.8.adoc:2
+#, no-wrap
+msgid "authselect(8)"
+msgstr "authselect(8)"
+
+#. type: Title -
+#: src/man/authselect.8.adoc:6
+#, no-wrap
+msgid "NAME"
+msgstr "NAAM"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:9
+msgid "authselect - select system identity and authentication sources."
+msgstr "authselect - selecteert systeemidentiteit en authenticatiebronnen."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:11
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:13
+#, no-wrap
+msgid " authselect [--debug] [--trace] [--warn] command [command options]\n"
+msgstr " authselect [--debug] [--trace] [--warn] commando [commando opties]\n"
+
+#. type: Title -
+#: src/man/authselect.8.adoc:15
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "BESCHRIJVING"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:21
+#, fuzzy
+#| msgid ""
+#| "*Authselect* is a tool to configure system identity and authentication "
+#| "sources\n"
+#| "and providers by selecting a specific profile. Profile is a set of files "
+#| "that\n"
+#| "describes how the resulting system configuration will look like. When a "
+#| "profile\n"
+#| "is selected, *authselect* will create nsswitch.conf(5) and PAM(8) stack "
+#| "to use\n"
+#| "identity and authentication sources defined by the profile.\n"
+msgid ""
+"*Authselect* is a tool to configure system identity and authentication "
+"sources and providers by selecting a specific profile. Profile is a set of "
+"files that describes how the resulting system configuration will look like. "
+"When a profile is selected, *authselect* will create nsswitch.conf(5) and "
+"PAM(8) stack to use identity and authentication sources defined by the "
+"profile."
+msgstr ""
+"*Authselect* is een gereedschap voor het configureren van systeemidentiteit, "
+"authenticatiebronnen\n"
+"en aanbieders door middel van het selecteren van een specifiek profiel. Een "
+"profiel is een verzameling\n"
+"van bestanden die beschrijft hoe de resulterende systeemconfiguratie eruit "
+"zal zien. Wanneer een profiel\n"
+"is geselecteerd, zal *authselect* nsswitch.conf en een PAM-stack aanmaken om "
+"de identiteits- en\n"
+"authenticatiebronnen te gebruiken die worden gedefinieerd door het profiel.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:27
+msgid ""
+"If the provided profile set is not sufficient, the administrator may create "
+"a custom profile by putting it in a special profile directory "
+"({AUTHSELECT_CUSTOM_DIR}). By doing so, the profile is immediately usable by "
+"*authselect*. See _authselect-profiles(5)_ for more information on extending "
+"existing profiles."
+msgstr ""
+"Als de verschafte verzameling van profielen niet voldoende is, kan de "
+"beheerder een aangepast profiel aanmaken door deze in een speciale "
+"profielmap ({AUTHSELECT_CUSTOM_DIR}) te plaatsen. Daarna is het profiel is "
+"onmiddellijk te gebruiken door *authselect*. Zie _authselect-profiles(5)_ "
+"voor meer informatie over het uitbreiden van bestaande profielen."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:29
+#, no-wrap
+msgid "OPT-IN TO AUTHSELECT"
+msgstr "KIEZEN VOOR AUTHSELECT"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:39
+msgid ""
+"Authselect will not touch your existing configuration unless it has already "
+"been created by it. If you want to start using authselect to configure your "
+"system authentication, please call *authselect select* with *--force* "
+"parameter first (e.g. *authselect select sssd --force*). The *--force* "
+"parameter tells authselect that it is all right to overwrite existing non-"
+"authselect configuration (see description below). Using the *--force* "
+"parameter will automatically generate a backup of your current configuration "
+"so if you wish to go back you can restore it with *authselect backup-"
+"restore* command (see description below)."
+msgstr ""
+"Authselect tast uw bestaande configuratie niet aan, tenzij zij reeds door "
+"authselect is gecreëerd. Als u authselect wilt gaan gebruiken om uw "
+"systeemauthenticatie te configureren, roept u eerst *authselect select* aan "
+"met de parameter *--force* (bijvoorbeeld *authselect select sssd --force*). "
+"De parameter *--force* vertelt authselect dat het in orde is om de bestaande "
+"configuratie te overschrijven (zie beschrijving hieronder). Het gebruik van "
+"de parameter *--force* zal automatisch een back-up van uw huidige "
+"configuratie maken. Als u later terug wilt gaan, dan kunt u met het commando "
+"*authselect backup-restore* uw huidige configuratie herstellen (zie "
+"beschrijving hieronder)."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:41
+#, no-wrap
+msgid "OPT-OUT FROM AUTHSELECT"
+msgstr "ZICH TERUGTREKKEN UIT AUTHSELECT"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:45
+msgid ""
+"To stop authselect from managing your configuration, run *authselect opt-"
+"out*.  This will remove all authselect configuration from your system and "
+"you can then modify your configuration manually."
+msgstr ""
+"Om authselect te doen ophouden uw configuratie te beheren, voert u "
+"*authselec opt-out* uit. Dit zal alle authselect-configuraties van uw "
+"systeem verwijderen en u kunt dan uw configuratie handmatig aanpassen."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:47
+#, no-wrap
+msgid "AVAILABLE COMMANDS"
+msgstr "BESCHIKBARE COMMANDO'S"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:50
+msgid ""
+"To list all available commands run *authselect* without any parameters.  To "
+"print help for the selected command run *authselect COMMAND --help*."
+msgstr ""
+"Om alle beschikbare commando's te tonen voert u *authselect* uit zonder "
+"parameters. Om hulp voor het geselecteerde commando weer te geven voert u "
+"*authselect COMMANDO --help* uit."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:51
+#, no-wrap
+msgid "*select* profile_id [features] [-f, --force] [-q, --quiet] [-b] [--backup=NAME]"
+msgstr "*select* profile_id [features] [-f, --force] [-q, --quiet] [-b] [--backup=NAAM]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:54
+msgid ""
+"Activate desired profile. See profile description with *show* command, to "
+"list profile specific optional features."
+msgstr ""
+"Activeer het gewenste profiel. Zie profielbeschrijving met *show* commando, "
+"om profielspecifieke optionele functies te tonen."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:55
+#, no-wrap
+msgid "*--force, -f*"
+msgstr "*--force, -f*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:60
+#, no-wrap
+msgid ""
+"Write changes even if the previous configuration was not created by\n"
+"authselect but by other tool or by manual changes. This option will\n"
+"automatically backup system files before writing any change unless\n"
+"*--nobackup* option is set.\n"
+msgstr ""
+"Schrijf veranderingen weg, zelfs als de vorige configuratie niet gecreëerd werd door\n"
+"authselect maar door een ander gereedschap of door handmatige veranderingen.\n"
+"Deze optie zal van systeembestanden automatisch een back-up maken voordat de\n"
+"veranderingen weggeschreven worden tenzij de optie *--nobackup* meegegeven\n"
+"wordt.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:61 src/man/authselect.8.adoc:86
+#: src/man/authselect.8.adoc:155 src/man/authselect.8.adoc:173
+#, no-wrap
+msgid "*-b*"
+msgstr "*-b*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:66
+#, no-wrap
+msgid ""
+"Backup system files before activating the selected profile. The backup\n"
+"will be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with\n"
+"unique string is used as a name of the backup. This is a shortcut\n"
+"for *--backup=*.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat het geselecteerde profiel geactiveerd wordt.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. De huidige tijd is\n"
+"een unieke tekenreeks en wordt gebruikt als de NAAM van de back-up. Dit is gemakkelijker\n"
+"dan *--backup=* gebruiken.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:67 src/man/authselect.8.adoc:92
+#: src/man/authselect.8.adoc:161 src/man/authselect.8.adoc:179
+#, no-wrap
+msgid "*--backup=NAME*"
+msgstr "*--backup=NAAM*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:71
+#, no-wrap
+msgid ""
+"Backup system files before activating the selected profile. The backup\n"
+"will be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with\n"
+"unique string is used as a name if no value is provided.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat het geselecteerde profiel geactiveerd wordt.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. De huidige tijd is een\n"
+"unieke string en wordt als NAAM gebruikt als geen naam opgegeven wordt.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:72
+#, no-wrap
+msgid "*--nobackup*"
+msgstr "*--nobackup*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:74
+#, no-wrap
+msgid "Do not backup system configuration even if *--force* is set.\n"
+msgstr "Maak geen back-up van systeemconfiguratie, zelfs als *--force* meegegeven is.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:75 src/man/authselect.8.adoc:166
+#, no-wrap
+msgid "*--quiet, -q*"
+msgstr "*--quiet, -q*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:78 src/man/authselect.8.adoc:169
+#, no-wrap
+msgid ""
+"The command will not print any informational message such as additional\n"
+"profile requirements or backup location. Errors are still being print.\n"
+msgstr ""
+"Het commando zal geen enkel bericht ter informatie afdrukken zoals over extra\n"
+"profielvereisten of over een back-uplocatie. Fouten worden wel geprint.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:79
+#, no-wrap
+msgid "*apply-changes* [-b] [--backup=NAME]"
+msgstr "*apply-changes* [-b] [--backup=NAAM]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:85
+msgid ""
+"Re-apply currently selected profile. If the profile templates were updated "
+"this command can be used to regenerate current system configuration in order "
+"to apply these changes on the system. This command will only re-apply the "
+"changes if the existing configuration is a valid authselect configuration, "
+"otherwise an error is returned."
+msgstr ""
+"Pas het huidig geselecteerde profiel opnieuw toe. Als de profielsjablonen "
+"vernieuwd werden kan dit commando gebruikt worden om de huidige "
+"systeemconfiguratie opnieuw te genereren om deze veranderingen toe te passen "
+"op het systeem. Dit commando zal de veranderingen alleen opnieuw toepassen "
+"als de bestaande configuratie een geldige authselect-configuratie is, anders "
+"wordt een fout geretourneerd."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:91
+#, no-wrap
+msgid ""
+"Backup system files before applying changes. The backup\n"
+"will be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with\n"
+"unique string is used as a name of the backup. This is a shortcut\n"
+"for *--backup=*.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat wijzigingen worden toegepast.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. Een\n"
+"unieke string met de huidige tijd zal worden gebruikt als NAAM voor de back-up.\n"
+"Dit is eenvoudiger dan *--backup=*.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:96
+#, no-wrap
+msgid ""
+"Backup system files before applying changes. The backup will\n"
+"be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with unique\n"
+"string is used as a name if no value is provided.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat wijzigingen worden toegepast.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. Een\n"
+"unieke string met de huidige tijd zal worden gebruikt als NAAM als geen naam is\n"
+"gegeven.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:97
+#, no-wrap
+msgid "*list*"
+msgstr "*list*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:99
+msgid "List available profiles."
+msgstr "Toon de beschikbare profielen."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:100
+#, no-wrap
+msgid "*list-features* profile_id"
+msgstr "*list-features* profile_id"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:104
+#, no-wrap
+msgid ""
+"List all features available in given profile.\n"
+"_Note:_ This will only list the features without any description. Please, read the profile documentation with *show* to see what the features do."
+msgstr ""
+"Toon alle functies die beschikbaar zijn in het gegeven profiel.\n"
+"_Opmerking:_ Dit zal alleen de functies tonen, zonder beschrijving. Gelieve de profieldocumentatie te lezen met *show* om te zien wat de functies inhouden."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:105
+#, no-wrap
+msgid "*show* profile_id"
+msgstr "*show* profile_id"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:107
+msgid "Print information about the profile."
+msgstr "Druk informatie af over het profiel."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:108
+#, no-wrap
+msgid "*requirements* profile_id [features]"
+msgstr "*requirements* profile_id [features]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:110
+msgid "Print information about profile requirements."
+msgstr "Druk informatie af over de profielvereisten."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:111
+#, no-wrap
+msgid "*current* [-r, --raw]"
+msgstr "*current* [-r, --raw]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:115
+msgid ""
+"Print information about currently selected profiles. If *--raw* option is "
+"specified, the command will print raw parameters as they were passed to "
+"*select* command instead of formatted output."
+msgstr ""
+"Druk informatie af over de huidige geselecteerde profielen. Als de optie *--"
+"raw* meegegeven is, zal het commando de parameters afdrukken zoals ze "
+"doorgegeven waren aan het *select*-commando in plaats van als geformatteerde "
+"uitvoer."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:116
+#, no-wrap
+msgid "*check*"
+msgstr "*check*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:120
+msgid ""
+"Check if the current configuration is valid (it was either created by "
+"*authselect* or there are no leftovers from previous authselect "
+"configuration)."
+msgstr ""
+"Controleer of de huidige configuratie geldig is (zij is aangemaakt door "
+"*authselect* of er zijn geen restanten van een vorige authselect-"
+"configuratie)."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:121
+#, no-wrap
+msgid "*test* profile_id [options] [features]"
+msgstr "*test* profile_id [opties] [functies]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:124
+msgid ""
+"Print content of files generated by *authselect* without actually writing "
+"anything to system configuration."
+msgstr ""
+"Druk de inhoud van de bestanden af die werden gegenereerd door *authselect* "
+"zonder daadwerkelijk iets naar de systeemconfiguratie weg te schrijven."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:125
+#, no-wrap
+msgid "*-a, --all*"
+msgstr "*-a, --all*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:127
+#, no-wrap
+msgid "Print content of all files.\n"
+msgstr "Druk de inhoud van alle bestanden af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:128
+#, no-wrap
+msgid "*-n, --nsswitch*"
+msgstr "*-n, --nsswitch*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:130
+#, no-wrap
+msgid "Print nsswitch.conf content.\n"
+msgstr "Druk de inhoud van nsswitch.conf af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:131
+#, no-wrap
+msgid "*-s, --system-auth*"
+msgstr "*-s, --system-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:133
+#, no-wrap
+msgid "Print system-auth content.\n"
+msgstr "Druk de inhoud van system-auth af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:134
+#, no-wrap
+msgid "*-p, --password-auth*"
+msgstr "*-p, --password-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:136
+#, no-wrap
+msgid "Print password-auth content.\n"
+msgstr "Druk de inhoud van password-auth af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:137
+#, no-wrap
+msgid "*-c, --smartcard-auth*"
+msgstr "*-c, --smartcard-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:139
+#, no-wrap
+msgid "Print smartcard-auth content.\n"
+msgstr "Druk de inhoud van smartcard-auth af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:140
+#, no-wrap
+msgid "*-f, --fingerprint-auth*"
+msgstr "*-f, --fingerprint-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:142
+#, no-wrap
+msgid "Print fingerprint-auth content.\n"
+msgstr "Druk de inhoud van fingerprint-auth af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:143
+#, no-wrap
+msgid "*-o, --postlogin*"
+msgstr "*-o, --postlogin*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:145
+#, no-wrap
+msgid "Print postlogin content.\n"
+msgstr "Druk de inhoud van postlogin af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:146
+#, no-wrap
+msgid "*-d, --dconf-db*"
+msgstr "*-d, --dconf-db*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:148
+#, no-wrap
+msgid "Print dconf database content.\n"
+msgstr "Druk de inhoud van de dconf-database af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:149
+#, no-wrap
+msgid "*-l, --dconf-lock*"
+msgstr "*-l, --dconf-lock*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:151
+#, no-wrap
+msgid "Print dconf lock content.\n"
+msgstr "Druk de inhoud van de dconf-vergrendeling af.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:152
+#, no-wrap
+msgid "*enable-feature* feature [-b] [--backup=NAME] [-q, --quiet]"
+msgstr "*enable-feature* functie [-b] [--backup=NAAM] [-q, --quiet]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:154
+msgid "Enable feature in the currently selected profile."
+msgstr "Zet functie aan in de huidige geselecteerde profiel."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:160
+#, no-wrap
+msgid ""
+"Backup system files before enabling feature. The backup\n"
+"will be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with\n"
+"unique string is used as a name of the backup. This is a shortcut\n"
+"for *--backup=*.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat de functie wordt aangezet.\n"
+"De back-up zal worden opgeslagen in {AUTHSELECT_BACKUP_DIR}/NAAM. Een unieke\n"
+"tekenreeks met de huidige tijd zal worden gebruikt voor de NAAM van de back-up.\n"
+"Dit is gemakkelijker dan *--backup=* gebruiken.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:165
+#, no-wrap
+msgid ""
+"Backup system files before enabling feature. The backup will\n"
+"be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with unique\n"
+"string is used as a name if no value is provided.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat de functie wordt aangezet.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. Een\n"
+"unieke tekenreeks met de huidige tijd zal worden gebruikt voor NAAM als geen\n"
+"naam is opgegeven.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:170
+#, no-wrap
+msgid "*disable-feature* feature [-b] [--backup=NAME]"
+msgstr "*disable-feature* functie [-b] [--backup=NAAM]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:172
+msgid "Disable feature in the currently selected profile."
+msgstr "Zet functie uit in de huidige geselecteerde profiel."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:178
+#, no-wrap
+msgid ""
+"Backup system files before disabling feature. The backup\n"
+"will be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with\n"
+"unique string is used as a name of the backup. This is a shortcut\n"
+"for *--backup=*.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat de functie wordt uitgezet.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. Een\n"
+"unieke tekenreeks met de huidige tijd zal worden gebruikt voor de NAAM van de\n"
+"back-up. Dit is gemakkelijker dan *--backup=* gebruiken.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:183
+#, no-wrap
+msgid ""
+"Backup system files before disabling feature. The backup will\n"
+"be stored at {AUTHSELECT_BACKUP_DIR}/NAME. Current time with unique\n"
+"string is used as a name if no value is provided.\n"
+msgstr ""
+"Maak een back-up van systeembestanden voordat de functie wordt uitgezet.\n"
+"De back-up zal opgeslagen worden in {AUTHSELECT_BACKUP_DIR}/NAAM. Een\n"
+"unieke tekenreeks met de huidige tijd zal gebruikt worden als NAAM als geen\n"
+"naam is opgegeven.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:184
+#, no-wrap
+msgid "*is-feature-enabled* feature"
+msgstr ""
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:186
+#, fuzzy
+#| msgid "Disable feature in the currently selected profile."
+msgid "Check if feature is currently enabled in the selected profile."
+msgstr "Zet functie uit in de huidige geselecteerde profiel."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:187
+#, no-wrap
+msgid "*create-profile* NAME [--vendor,-v] [options]"
+msgstr "*create-profile* NAAM [--vendor,-v] [opties]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:192
+msgid ""
+"Create a new custom profile named _NAME_. The profile can be based on an "
+"existing profile in which case the new profile templates are either copied "
+"from the base profile or symbolic links to these files are created if such "
+"option is selected."
+msgstr ""
+"Maak een nieuw aangepast profiel aan genaamd _NAAM_. Het profiel kan "
+"gebaseerd zijn op een bestaand profiel, in welk geval de nieuwe "
+"profielsjablonen ofwel kopieën worden van het basisprofiel ofwel er worden "
+"symbolische links naar deze bestanden gecreëerd als zo'n optie gekozen is."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:193
+#, no-wrap
+msgid "*--vendor,-v*"
+msgstr "*--vendor, -v*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:196
+#, no-wrap
+msgid ""
+"The new profile is a vendor profile instead of a custom profile. See\n"
+"_authselect-profiles(5)_ for more information on profile types.\n"
+msgstr ""
+"Het nieuwe profiel is een leveranciersprofiel in plaats van een aangepast profiel.\n"
+"Zie _authselect-profiles(5)_ voor meer informatie over profieltypes.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:197
+#, no-wrap
+msgid "*--base-on=BASE-ID, -b=BASE-ID*"
+msgstr "*--base-on=GRONDSLAG, -b=GRONDSLAG*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:200
+#, no-wrap
+msgid ""
+"The new profile will be based on a profile named _BASE-ID_. The base\n"
+"profile location is determined with these steps:\n"
+msgstr ""
+"Het nieuwe profiel zal gebaseerd worden op een profiel met de naam _GRONDSLAG_.\n"
+"De locatie van de GRONDSLAG wordt bepaald met de volgen stappen:\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:201
+#, no-wrap
+msgid "If _BASE-ID_ starts with prefix _custom/_ it is a custom profile.\n"
+msgstr "Als _BASE-ID_ begint met voorvoegsel _custom/_ dan is het een aangepast profiel.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:202
+#, no-wrap
+msgid "Try if _BASE-ID_ is found in vendor profiles.\n"
+msgstr "Ga na of _GRONDSLAG_ gevonden kan worden in de leveranciersprofielen.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:203
+#, no-wrap
+msgid "Try if _BASE-ID_ is found in default profiles.\n"
+msgstr "Ga na of _GRONDSLAG_ gevonden kan worden in de standaard profielen.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:204
+#, no-wrap
+msgid "Return an error.\n"
+msgstr "Retourneer een fout.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:205
+#, no-wrap
+msgid "*--base-on-default*"
+msgstr "*--base-on-default*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:208
+#, no-wrap
+msgid ""
+"The base profile is a default profile even if it is found also within\n"
+"vendor profiles.\n"
+msgstr ""
+"Het basisprofiel is een standaard profiel zelfs als het ook gevonden\n"
+"word in de leveranciersprofielen.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:209
+#, no-wrap
+msgid "*--symlink-meta*"
+msgstr "*--symlink-meta*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:212
+#, no-wrap
+msgid ""
+"Meta files, such as _README_ and _REQUIREMENTS_ will be symbolic links\n"
+"to the origin profile files instead of their copy.\n"
+msgstr ""
+"Metabestanden zoals _README_ en _REQUIREMENTS_ zullen symbolische links\n"
+"zijn naar de oorspronkelijke profielbestanden in plaats van hun kopieën.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:213
+#, no-wrap
+msgid "*--symlink-nsswitch*"
+msgstr "*--symlink-nsswitch*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:216
+#, no-wrap
+msgid ""
+"_nsswitch.conf_ template will be symbolic link to the origin profile\n"
+"file instead of its copy.\n"
+msgstr ""
+"Een _nsswitch.conf_-sjabloon zal een symbolische link zijn naar het\n"
+"oorspronkelijke bestand in plaats van een kopie.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:217
+#, no-wrap
+msgid "*--symlink-pam*"
+msgstr "*--symlink-pam*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:220
+#, no-wrap
+msgid ""
+"_PAM_ templates will be symbolic links to the origin profile files\n"
+"instead of their copy.\n"
+msgstr ""
+"_PAM_-sjablonen zullen symbolische links zijn naar de oorspronkelijke\n"
+"profielbestanden in plaats van een kopie.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:221
+#, no-wrap
+msgid "*--symlink-dconf*"
+msgstr "*--symlink-dconf*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:224
+#, no-wrap
+msgid ""
+"_dconf_ templates will be symbolic links to the origin profile files\n"
+"instead of their copy.\n"
+msgstr ""
+"_dconf_-sjablonen zullen symbolische links zijn naar de oorspronkelijke\n"
+"profielbestanden in plaats van een kopie.\n"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:225
+#, no-wrap
+msgid "*--symlink=FILE,-s=FILE*"
+msgstr "*--symlink=BESTAND, -s=BESTAND*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:228
+#, no-wrap
+msgid ""
+"Create a symbolic link for a template file _FILE_ instead of creating\n"
+"its copy. This option can be passed multiple times.\n"
+msgstr ""
+"Creëer een symbolische link voor een sjabloonbestand _BESTAND_ in plaats van het\n"
+"aanmaken van een kopie. Deze optie kan meerdere keren meegegeven worden.\n"
+
+#. type: Title -
+#: src/man/authselect.8.adoc:230
+#, no-wrap
+msgid "BACKUP COMMANDS"
+msgstr "BACK-UP COMMANDO'S"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:232
+msgid "These commands can be used to manage backed up configurations."
+msgstr ""
+"Deze commando's kunnen gebruikt worden om back-ups van configuraties te "
+"beheren."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:233
+#, no-wrap
+msgid "*backup-list* [-r, --raw]"
+msgstr "*backup-list* [-r, --raw]"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:236
+msgid ""
+"Print available backups.  If *--raw* option is specified, the command will "
+"print only backup names without any formatting and additional information."
+msgstr ""
+"Druk de beschikbare back-ups af. Als de optie *--raw* meegegeven is, dan zal "
+"het commando de namen van de back-ups afdrukken zonder formattering of extra "
+"informatie."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:237
+#, no-wrap
+msgid "*backup-remove* BACKUP"
+msgstr "*backup-remove* BACK-UP"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:239
+msgid "Permanently delete backup named _BACKUP_."
+msgstr "Verwijder de back-up genaamd _BACK-UP_ definitief."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:240
+#, no-wrap
+msgid "*backup-restore* BACKUP"
+msgstr "*backup-restore* BACK-UP"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:243
+msgid ""
+"Restore configuration from backup named _BACKUP_. *Note:* this will "
+"overwrite current configuration."
+msgstr ""
+"Herstel de configuratie met back-up _BACK-UP_. *Opmerking:* Dit zal de "
+"huidige configuratie overschrijven."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:245
+#, no-wrap
+msgid "OTHER COMMANDS"
+msgstr "ANDERE COMMANDO'S"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:247
+#, no-wrap
+msgid "*opt-out*"
+msgstr "*opt-out*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:251
+msgid ""
+"Remove authselect configuration. This will restore nsswitch and PAM "
+"configuration under its system location and authselect will no longer manage "
+"it. Run *authselect select* to opt-in again."
+msgstr ""
+"Verwijder de configuratie van authselect. Dit zal de configuraties van "
+"nsswitch en PAM herstellen op hun plaatsen in het bestandssysteem en "
+"authselect zal hen niet langer beheren. Voer *authselect select* uit om weer "
+"voor authselect te kiezen."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:253
+#, no-wrap
+msgid "COMMON OPTIONS"
+msgstr "ALGEMENE OPTIES"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:255
+msgid "These options are available with all commands."
+msgstr "Deze opties zijn beschikbaar voor alle commando's."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:256
+#, no-wrap
+msgid "*--debug*"
+msgstr "*--debug*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:258
+msgid "Print debugging information and error messages."
+msgstr "Druk informatie voor debuggen en foutmeldingen af."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:259
+#, no-wrap
+msgid "*--trace*"
+msgstr "*--trace*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:261
+msgid "Print information about what the tool is doing."
+msgstr "Druk informatie af over waar het programma mee bezig is."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:262
+#, no-wrap
+msgid "*--warn*"
+msgstr "*--warn*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:266
+msgid ""
+"Print information about unexpected situations that do not affect the program "
+"execution but may indicate some undesired situations (e.g. unexpected file "
+"in a profile directory)."
+msgstr ""
+"Druk informatie af over onverwachte situaties die de uitvoering van het "
+"programma niet beïnvloeden maar die een indicatie kunnen zijn van ongewenste "
+"situaties (bijv. een onverwacht bestand in een profielmap)."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:268
+#, no-wrap
+msgid "TROUBLESHOOTING"
+msgstr "PROBLEMEN OPLOSSEN"
+
+#. type: Title ~
+#: src/man/authselect.8.adoc:271
+#, no-wrap
+msgid "How can I tell if my system is using authselect?"
+msgstr "Hoe weet ik of mijn systeem authselect gebruikt?"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:275
+msgid ""
+"Use *authselect check*. The output will tell you if you have 1) "
+"configuration generated by authselect 2) non-authselect configuration or 3) "
+"configuration that was generated by authselect but modified manually at some "
+"point."
+msgstr ""
+"Om te weten of uw authselect gebruikt typt u *authselect check*. De uitvoer "
+"zal u vertellen of: (1) u een configuratie hebt die gegenereerd is door "
+"authselect; ( 2) u een configuratie hebt die niet door authselect "
+"gegenereerd is; (3) u een configuratie hebt die gegenereerd is door "
+"authselect maar die ooit handmatig is gewijzigd."
+
+#. type: Title ~
+#: src/man/authselect.8.adoc:277
+#, no-wrap
+msgid "Is nsswitch.conf supposed to be a symbolic link now?"
+msgstr "Moet nsswitch.conf nu een symbolische link zijn?"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:283
+msgid ""
+"Authselect generates your system configuration from scratch and stores it at "
+"{AUTHSELECT_CONFIG_DIR}. System files are then created as symbolic links to "
+"this directory. Symbolic links are used to make it clear that authselect is "
+"now owning your configuration and should be used instead of any manual "
+"modification."
+msgstr ""
+"Authselect genereert uw systeemconfiguratie helemaal opnieuw en slaat haar "
+"op in {AUTHSELECT_CONFIG_DIR}. Systeembestanden worden dan gecreëerd als "
+"symbolische links naar deze map. Symbolische links worden gebruikt om "
+"duidelijk te maken dat authselect nu uw configuratie beheert en gebruikt "
+"moet worden in plaats van handmatige wijziging."
+
+#. type: Title ~
+#: src/man/authselect.8.adoc:285
+#, no-wrap
+msgid "Error: Unexpected changes to the configuration were detected."
+msgstr "Fout: onverwachte wijzigingen in de configuratie zijn gedetecteerd."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:287
+msgid "For example:"
+msgstr "Bijvoorbeeld:"
+
+#. type: delimited block .
+#: src/man/authselect.8.adoc:293
+#, no-wrap
+msgid ""
+"[error] [/etc/authselect/nsswitch.conf] does not exist!\n"
+"[error] [/etc/nsswitch.conf] is not a symbolic link!\n"
+"[error] [/etc/nsswitch.conf] was not created by authselect!\n"
+"[error] Unexpected changes to the configuration were detected.\n"
+"[error] Refusing to activate profile unless those changes are removed or overwrite is requested.\n"
+msgstr ""
+"[fout] [/etc/authselect/nsswitch.conf] bestaat niet!\n"
+"[fout] [/etc/nsswitch.conf] is geen symbolische link!\n"
+"[fout] [/etc/nsswitch.conf] is niet aangemaakt door authselect!\n"
+"[fout] Onverwachte wijzigingen in de configuratie zijn gedetecteerd.\n"
+"[fout] Het profiel activeren wordt geweigerd tenzij die wijzigingen worden verwijderd of om overschrijven wordt verzocht.\n"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:297
+msgid ""
+"This means that your configuration is unknown to authselect and as such it "
+"will not be modified. To fix this, please call *authselect select* with *--"
+"force* parameter to say that it is all right to overwrite it."
+msgstr ""
+"Dit betekent uw configuratie onbekend is bij authselect en daarom niet zal "
+"worden gewijzigd. Om dit te verhelpen, gelieve *authselect select* aan te "
+"roepen met de parameter *--force* om aan te geven dat het in orde is om het "
+"te overschrijven."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:299
+#, no-wrap
+msgid "RETURN CODES"
+msgstr "RETOURNEERCODES"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:301
+msgid "The *authselect* can return these exit codes:"
+msgstr "*authselect* kan de volgende exit-codes retourneren:"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:303
+msgid "0: Success."
+msgstr "0: Succes."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:304
+msgid "1: Generic error."
+msgstr "1: Algemene fout."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:305
+msgid ""
+"2: Profile or configuration was not found or the system was not configured "
+"with authselect."
+msgstr ""
+"2: Profiel of configuratie werd niet gevonden of het systeem werd niet "
+"geconfigureerd met authselect."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:306
+msgid ""
+"3: Current configuration is not valid, it was edited without authselect."
+msgstr ""
+"3: Huidige configuratie is niet geldig, het werd bewerkt zonder authselect."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:307
+msgid ""
+"4: System configuration must be overwritten to activate an authselect "
+"profile, --force parameter is needed."
+msgstr ""
+"4: Systeemconfiguratie moet overschreven worden om een profiel van "
+"authselect te activeren, de --force parameter is daarom benodigd."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:308
+msgid "5: Executed command must be run as root."
+msgstr "5: Het commando moet uitgevoerd worden door root."
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:309
+msgid "6: No configuration was detected."
+msgstr "6: Geen configuratie werd gedetecteerd."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:311
+#, no-wrap
+msgid "GENERATED FILES"
+msgstr "GEGENEREERDE BESTANDEN"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:314
+msgid ""
+"Authselect creates and maintains the following files to configure system "
+"identity and authentication providers properly."
+msgstr ""
+"Authselect creëert en onderhoudt de volgende bestanden voor het correct "
+"configureren van systeemidentiteit en authenticatieverschaffers."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:315
+#, no-wrap
+msgid "*{AUTHSELECT_NSSWITCH_CONF}*"
+msgstr "*{AUTHSELECT_NSSWITCH_CONF}*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:317
+msgid "Name Service Switch configuration file."
+msgstr "Name Service Switch-configuratiebestand."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:318
+#, no-wrap
+msgid "*{AUTHSELECT_PAM_DIR}/system-auth*"
+msgstr "*{AUTHSELECT_PAM_DIR}/system-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:321
+msgid ""
+"PAM stack that is included from nearly all individual service configuration "
+"files."
+msgstr ""
+"PAM-stack die wordt toegevoegd aan bijna alle configuratiebestanden van "
+"diensten."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:322
+#, no-wrap
+msgid "*{AUTHSELECT_PAM_DIR}/password-auth, smartcard-auth, fingerprint-auth*"
+msgstr "*{AUTHSELECT_PAM_DIR}/password-auth, smartcard-auth, fingerprint-auth*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:326
+msgid ""
+"These PAM stacks are for applications which handle authentication from "
+"different types of devices via simultaneously running individual "
+"conversations instead of one aggregate conversation."
+msgstr ""
+"Deze PAM-stacks zijn voor toepassingen die authenticatie vanaf verschillende "
+"typen van apparaten afhandelen via simultane individuele conversaties in "
+"plaats van een samengevoegde conversatie."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:327
+#, no-wrap
+msgid "*{AUTHSELECT_PAM_DIR}/postlogin*"
+msgstr "*{AUTHSELECT_PAM_DIR}/postlogin*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:335
+msgid ""
+"The purpose of this PAM stack is to provide a common place for all PAM "
+"modules which should be called after the stack configured in system-auth or "
+"the other common PAM configuration files. It is included from all individual "
+"service configuration files that provide login service with shell or file "
+"access. _NOTE: the modules in the postlogin configuration file are executed "
+"regardless of the success or failure of the modules in the system-auth "
+"configuration file._"
+msgstr ""
+"Het doel van deze PAM-stack is het bieden van een gemeenschappelijke plaats "
+"voor alle PAM-modules welke aangeroepen behoren te worden nadat de stack "
+"geconfigureerd werd met system-auth of de andere algemene PAM-"
+"configuratiebestanden. Hij wordt ingevoegd in alle configuratiebestanden "
+"voor de individuele diensten die een inlogdienst bieden voor toegang tot een "
+"shell of tot bestanden. _OPMERKING: De modules in het postlogin-"
+"configuratiebestand worden uitgevoerd onafhankelijk van het succes of het "
+"mislukken van de modules in het system-auth-configuratiebestand._"
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:336
+#, no-wrap
+msgid "*{AUTHSELECT_DCONF_DIR}/{AUTHSELECT_DCONF_FILE}*"
+msgstr "*{AUTHSELECT_DCONF_DIR}/{AUTHSELECT_DCONF_FILE}*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:340
+msgid ""
+"Changes to dconf database. The main uses case of this file is to set changes "
+"for gnome login screen in order to enable or disable smartcard and "
+"fingerprint authentication."
+msgstr ""
+"Wijzigingen in de dconf-database. De belangrijkste toepassing van dit "
+"bestand is het instellen van wijzigingen van het GNOME inlogscherm voor het "
+"aan- of uitzetten van authenticatie met smartcard of vingerafdruk."
+
+#. type: Labeled list
+#: src/man/authselect.8.adoc:341
+#, no-wrap
+msgid "*{AUTHSELECT_DCONF_DIR}/locks/{AUTHSELECT_DCONF_FILE}*"
+msgstr "*{AUTHSELECT_DCONF_DIR}/locks/{AUTHSELECT_DCONF_FILE}*"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:343
+msgid "This file define locks on values set in dconf database."
+msgstr ""
+"Dit bestand definieert vergrendelingen op waarden ingesteld in de dconf-"
+"database."
+
+#. type: Title -
+#: src/man/authselect.8.adoc:345
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "ZIE OOK"
+
+#. type: Plain text
+#: src/man/authselect.8.adoc:346
+msgid ""
+"authselect-profiles(5), authselect-migration(7), nsswitch.conf(5), PAM(8)"
+msgstr ""
+"authselect-profiles(5), authselect-migration(7), nsswitch.conf(5), PAM(8)"
+
+#, no-wrap
+#~ msgid "NSSWITCH.CONF MANAGEMENT"
+#~ msgstr "BEHEER VAN NSSWITCH.CONF"
+
+#~ msgid ""
+#~ "Authselect generates {AUTHSELECT_NSSWITCH_CONF} and does not allow any "
+#~ "user changes to this file. Such changes are detected and authselect will "
+#~ "refuse to write any system configuration unless a *--force* option is "
+#~ "provided to the *select* command. This mechanism prevents authselect from "
+#~ "overwriting anything that does not match any available profile."
+#~ msgstr ""
+#~ "Authselect genereert {AUTHSELECT_NSSWITCH_CONF} en staat een gebruiker "
+#~ "niet toe dit bestand te veranderen. Zulke veranderingen worden "
+#~ "gedetecteerd en authselect zal weigeren een systeemconfiguratie vast te "
+#~ "leggen, tenzij de optie *--force* werd meegegeven aan het *select*-"
+#~ "commando. Dit mechanisme voorkomt dat authselect iets overschrijft dat "
+#~ "niet overeenkomt met een beschikbaar profiel."
+
+#~ msgid ""
+#~ "Any user changes to nsswitch maps must be done in file "
+#~ "{AUTHSELECT_CONFIG_DIR}/user-nsswitch.conf. When authselect generates new "
+#~ "_nsswitch.conf_ it reads this file and combines it with configuration "
+#~ "from selected profile. The profile configuration takes always "
+#~ "precedence.  In other words, profiles do not have to set all nsswitch "
+#~ "maps but can set only those that are relevant to the profile. If a map is "
+#~ "set within a profile, it always overwrites the same map from _user-"
+#~ "nsswitch.conf_."
+#~ msgstr ""
+#~ "Elke wijziging in de nsswitch-afbeeldingen die uitgaat van een gebruiker "
+#~ "moet plaatsvinden in het bestand {AUTHSELECT_CONFIG_DIR}/user-nsswitch."
+#~ "conf. Als authselect een nieuwe _nsswitch.conf_ genereert leest het dit "
+#~ "bestand en combineert het met de configuratie van het geselecteerde "
+#~ "profiel. De profielconfiguratie heeft altijd voorrang. Met andere "
+#~ "woorden, profielen hoeven niet alle nsswitch-afbeeldingen in te stellen "
+#~ "maar kunnen alleen die instellen die relevant zijn voor het profiel. Als "
+#~ "een afbeelding is ingesteld in een profiel, dan overschrijft het "
+#~ "programma altijd dezelfde afbeelding in _user-nsswitch.conf_."
+
+#, no-wrap
+#~ msgid "Example 1"
+#~ msgstr "Voorbeeld 1"
+
+#, no-wrap
+#~ msgid ""
+#~ "# \"sssd\" profile\n"
+#~ "$ cat {AUTHSELECT_PROFILE_DIR}/sssd/nsswitch.conf\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "sudoers:    files sss {include if \"with-sudo\"}\n"
+#~ msgstr ""
+#~ "# \"sssd\" profile\n"
+#~ "$ cat {AUTHSELECT_PROFILE_DIR}/sssd/nsswitch.conf\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "sudoers:    files sss {include if \"with-sudo\"}\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "$ cat {AUTHSELECT_CONFIG_DIR}/user-nsswitch.conf\n"
+#~ "passwd: files sss\n"
+#~ "group: files sss\n"
+#~ "hosts: files dns myhostname\n"
+#~ "sudoers: files\n"
+#~ msgstr ""
+#~ "$ cat {AUTHSELECT_CONFIG_DIR}/user-nsswitch.conf\n"
+#~ "passwd: files sss\n"
+#~ "group: files sss\n"
+#~ "hosts: files dns myhostname\n"
+#~ "sudoers: files\n"
+
+#, no-wrap
+#~ msgid "$ authselect select sssd\n"
+#~ msgstr "$ authselect select sssd\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "# passwd and group maps from user-nsswitch.conf are ignored\n"
+#~ "$ cat {AUTHSELECT_NSSWITCH_CONF}\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "hosts:      files dns myhostname\n"
+#~ "sudoers:    files\n"
+#~ msgstr ""
+#~ "# passwd en group-mappen uit user-nsswitch.conf worden genegeerd\n"
+#~ "$ cat {AUTHSELECT_NSSWITCH_CONF}\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "hosts:      files dns myhostname\n"
+#~ "sudoers:    files\n"
+
+#, no-wrap
+#~ msgid "$ authselect select sssd with-sudo\n"
+#~ msgstr "$ authselect select sssd with-sudo\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "# passwd, group and sudoers maps from user-nsswitch.conf are ignored\n"
+#~ "$ cat {AUTHSELECT_NSSWITCH_CONF}\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "sudoers:    files sss\n"
+#~ "hosts:      files dns myhostname\n"
+#~ msgstr ""
+#~ "# passwd, group en sudoers-afbeeldingen uit user-nsswitch.conf worden genegeerd\n"
+#~ "$ cat {AUTHSELECT_NSSWITCH_CONF}\n"
+#~ "passwd:     sss files systemd\n"
+#~ "group:      sss files systemd\n"
+#~ "netgroup:   sss files\n"
+#~ "automount:  sss files\n"
+#~ "services:   sss files\n"
+#~ "sudoers:    files sss\n"
+#~ "hosts:      files dns myhostname\n"

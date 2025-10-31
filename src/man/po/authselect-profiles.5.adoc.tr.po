@@ -1,0 +1,725 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
+# Anonymous <noreply@weblate.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2025-07-31 10:54+0200\n"
+"PO-Revision-Date: 2021-12-10 17:16+0000\n"
+"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://translate.fedoraproject.org/projects/"
+"authselect/master-authselect-profiles5adoc/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.9.1\n"
+
+#. type: Title =
+#: src/man/authselect-profiles.5.adoc:2
+#, no-wrap
+msgid "authselect-profiles(5)"
+msgstr "authselect-profiles(5)"
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:6
+#, no-wrap
+msgid "NAME"
+msgstr "AD"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:8
+msgid "authselect-profiles - how to extend authselect profiles."
+msgstr "authselect-profiles - authselect profillerinin genişletilmesi."
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:10
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "AÇIKLAMA"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:13
+msgid ""
+"This manual page explains how are authselect profiles organized and how to "
+"create new profiles."
+msgstr ""
+"Bu kılavuz sayfasında authselect profillerinin nasıl düzenlendiği ve yeni "
+"profillerin nasıl oluşturulacağı açıklanmaktadır."
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:15
+#, no-wrap
+msgid "PROFILE DIRECTORIES"
+msgstr "PROFİL DİZİNLERİ"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:17
+msgid "Profiles can be found in one of three directories."
+msgstr "Profiller üç dizinden birinde bulunabilir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:18
+#, no-wrap
+msgid "*{AUTHSELECT_PROFILE_DIR}*"
+msgstr "*{AUTHSELECT_PROFILE_DIR}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:20
+msgid ""
+"Read-only directory containing profiles shipped together with authselect."
+msgstr "Authselect ile birlikte gelen profilleri içeren salt okunur dizin."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:21
+#, no-wrap
+msgid "*{AUTHSELECT_VENDOR_DIR}*"
+msgstr "*{AUTHSELECT_VENDOR_DIR}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:24
+msgid ""
+"Read-only directory for vendor-specific profiles that can override the ones "
+"in _default_ directory."
+msgstr ""
+"_Öntanımlı_ dizindeki profilleri geçersiz kılabilen sağlayıcıya özgü "
+"profiller için salt okunur dizin."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:25
+#, no-wrap
+msgid "*{AUTHSELECT_CUSTOM_DIR}*"
+msgstr "*{AUTHSELECT_CUSTOM_DIR}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:27
+msgid "Place for administrator-defined profiles."
+msgstr "Yönetici tarafından tanımlanan profillerin yeri."
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:29
+#, no-wrap
+msgid "PROFILE FILES"
+msgstr "PROFİL DOSYALARI"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:33
+msgid ""
+"Each profile consists of one or more of these files which provide a "
+"mandatory profile description and describe the changes that are done to the "
+"system."
+msgstr ""
+"Her profil, zorunlu profil açıklamasını sağlayan ve sistemde yapılan "
+"değişiklikleri açıklayan bu dosyalardan bir veya daha fazlasından "
+"oluşmaktadır."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:34
+#, no-wrap
+msgid "*README*"
+msgstr "*README*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:36
+msgid ""
+"Description of the profile. The first line must be a name of the profile."
+msgstr "Profilin açıklaması. İlk satır profilin adı olmalıdır."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:37
+#, no-wrap
+msgid "*system-auth*"
+msgstr "*system-auth*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:40
+msgid ""
+"PAM stack that is included from nearly all individual service configuration "
+"files."
+msgstr ""
+"Neredeyse tüm bireysel hizmet yapılandırma dosyalarının kullandığı PAM "
+"yığını."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:41
+#, no-wrap
+msgid "*password-auth*, *smartcard-auth*, *fingerprint-auth*"
+msgstr "*password-auth*, *smartcard-auth*, *fingerprint-auth*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:45
+msgid ""
+"These PAM stacks are for applications which handle authentication from "
+"different types of devices via simultaneously running individual "
+"conversations instead of one aggregate conversation."
+msgstr ""
+"Bu PAM yığınları, tek bir toplu görüşme yerine eş zamanlı bireysel "
+"görüşmeler yaparak farklı aygıt türlerinden kimlik doğrulaması "
+"gerçekleştiren uygulamalar içindir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:46
+#, no-wrap
+msgid "*postlogin*"
+msgstr "*postlogin*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:54
+msgid ""
+"The purpose of this PAM stack is to provide a common place for all PAM "
+"modules which should be called after the stack configured in system-auth or "
+"the other common PAM configuration files. It is included from all individual "
+"service configuration files that provide login service with shell or file "
+"access. _NOTE: the modules in the postlogin configuration file are executed "
+"regardless of the success or failure of the modules in the system-auth "
+"configuration file._"
+msgstr ""
+"Bu PAM yığınının amacı, system-auth veya diğer ortak PAM yapılandırma "
+"dosyalarında yapılandırılan yığının ardından çağırılması gereken tüm PAM "
+"modülleri için ortak bir yer sağlamaktır. Kabuk veya dosya erişimine sahip "
+"oturum açma hizmeti sağlayan tüm bireysel hizmet yapılandırma dosyalarında "
+"bulunur. _NOT: postlogin yapılandırma dosyasındaki modüller, system-auth "
+"yapılandırma dosyasındaki modüllerin başarılı veya başarısız olmasına "
+"bakılmaksızın yürütülür._"
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:55
+#, no-wrap
+msgid "*nsswitch.conf*"
+msgstr "*nsswitch.conf*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:57
+msgid "Name Service Switch configuration file."
+msgstr "Name Service Switch yapılandırma dosyası."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:58
+#, no-wrap
+msgid "*dconf-db*"
+msgstr "*dconf-db*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:62
+msgid ""
+"Changes to dconf database. The main uses case of this file is to set changes "
+"for gnome login screen in order to enable or disable smartcard and "
+"fingerprint authentication."
+msgstr ""
+"dconf veri tabanındaki değişiklikler. Bu dosyanın ana kullanım amacı, akıllı "
+"kart ve parmak izi kimlik doğrulamasını etkinleştirmek veya devre dışı "
+"bırakmak için gnome oturum açma ekranındaki değişiklikleri ayarlamaktır."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:63
+#, no-wrap
+msgid "*dconf-locks*"
+msgstr "*dconf-locks*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:65
+msgid "This file define locks on values set in dconf database."
+msgstr ""
+"Bu dosya, dconf veri tabanında ayarlanan değerlerin kilitlerini tanımlar."
+
+#. type: Title ~
+#: src/man/authselect-profiles.5.adoc:67
+#, no-wrap
+msgid "CONDITIONAL LINES"
+msgstr "KOŞULLU SATIRLAR"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:71
+msgid ""
+"Each of these files serves as a template. A template is a plain text file "
+"with optional usage of several operators that can be used to provide some "
+"optional profile features."
+msgstr ""
+"Bu dosyaların her biri bir şablon görevi görmektedir. Şablon, bazı isteğe "
+"bağlı profil özellikleri sağlamak için kullanılabilen birkaç işlemin isteğe "
+"bağlı kullanımına sahip bir düz metin dosyasıdır."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:72
+#, no-wrap
+msgid "*{continue if \"feature\"}*"
+msgstr "*{continue if \"özellik\"}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:77
+msgid ""
+"Immediately stop processing of the file unless \"feature\" is defined (the "
+"rest of the file content will be removed). If \"feature\" is defined, the "
+"whole line with this operator will be removed and the rest of the template "
+"will be processed."
+msgstr ""
+"\"özellik\" tanımlı olmadığı sürece dosyanın işlenmesini hemen durdur (dosya "
+"içeriğinin geri kalanı kaldırılacaktır). \"özellik\" tanımlıysa, bu işlemle "
+"birlikte tüm satır kaldırılacak ve şablonun geri kalanı işlenecektir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:78
+#, no-wrap
+msgid "*{stop if \"feature\"}*"
+msgstr "*{stop if \"özellik\"}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:83
+msgid ""
+"Opposite of \"continue if\". Immediately stop processing of the file if "
+"\"feature\" is defined (the rest of the file content will be removed).  If "
+"\"feature\" is not defined, the whole line with this operator will be "
+"removed and the rest of the template will be processed."
+msgstr ""
+"\"continue if\" koşulunun tersi. \"özellik\" tanımlıysa dosyanın işlenmesini "
+"hemen durdur (dosya içeriğinin geri kalanı kaldırılacaktır).  \"özellik\" "
+"tanımlı değilse, bu işlemle birlikte tüm satır kaldırılacak ve şablonun geri "
+"kalanı işlenecektir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:84
+#, no-wrap
+msgid "*{include if \"feature\"}*"
+msgstr "*{include if \"özellik\"}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:87
+msgid ""
+"Include the line where this operator is placed only if \"feature\" is "
+"defined."
+msgstr "Bu işlemin bulunduğu satırı yalnızca \"özellik\" tanımlıysa dahil et."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:88
+#, no-wrap
+msgid "*{exclude if \"feature\"}*"
+msgstr "*{exclude if \"özellik\"}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:91
+msgid ""
+"Opposite to \"include-if\". Include the line where this operator is placed "
+"only if \"feature\" is not defined."
+msgstr ""
+"\"include-if\" koşulunun tersi. Bu işlemin bulunduğu satırı yalnızca "
+"\"özellik\" tanımlı değilse dahil et."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:92
+#, no-wrap
+msgid "*{imply \"implied-feature\" if \"feature\"}*"
+msgstr "*{imply \"dolaylı-özellik\" if \"özellik\"}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:96
+msgid ""
+"Enable feature \"implied-feature\" if feature \"feature\" is enabled. The "
+"whole line with this operator is removed, thus it is not possible to add "
+"anything else around this operator at the same line."
+msgstr ""
+"\"özellik\" etkinse \"dolaylı-özellik\" özelliğini etkinleştir. Bu işlemle "
+"birlikte tüm satır kaldırılır, bu nedenle bu işlemin bulunduğu aynı satıra "
+"başka bir şey eklemek mümkün değildir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:97
+#, no-wrap
+msgid "*{if \"feature\":true|false}*"
+msgstr "*{if \"özellik\":true|false}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:100
+msgid ""
+"If \"feature\" is defined, replace this operator with string \"true\", "
+"otherwise with string \"false\"."
+msgstr ""
+"\"özellik\" tanımlıysa bu işlemi \"true\" dizgesiyle, değilse \"false\" "
+"dizgesiyle değiştir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:101
+#, no-wrap
+msgid "*{if \"feature\":true}*"
+msgstr "*{if \"özellik\":true}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:104
+msgid ""
+"If \"feature\" is defined, replace this operator with string \"true\", "
+"otherwise with an empty string."
+msgstr ""
+"\"özellik\" tanımlıysa bu işlemi \"true\" dizgesiyle, değilse boş dizgeyle "
+"değiştir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:108
+msgid ""
+"It is also possible to use logical expression in conditional line instead of "
+"specifying single feature name. In this case the expression will evaluate to "
+"true or false and the conditional operator will act upon the result."
+msgstr ""
+"Koşullu satırda bir özellik adı belirtmek yerine mantıksal ifade de "
+"kullanılabilir. Bu durumda ifade doğru veya yanlış olarak değerlendirilecek "
+"ve koşullu operator sonuca göre hareket edecektir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:113
+msgid ""
+"The expression syntax consists of feature names (e.g. _\"feature\"_) which "
+"returns _true_ if the feature is defined or _false_ if it is not defined and "
+"from the following logical operators: _and_, _or_ and _not_. The expression "
+"may also be enclosed in parentheses and contain multiple subexpressions."
+msgstr ""
+"İfade söz dizimi; özellik tanımlıysa _true_, değilse _false_ döndüren "
+"özellik adlarından (örn. _\"özellik\"_) ve şu mantıksal işlemlerden oluşur: "
+"_and_, _or_ ve _not_. İfade ayrıca parantez içine alınabilir ve birden fazla "
+"alt ifade içerebilir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:115
+msgid "For example:"
+msgstr "Örneğin:"
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:116
+#, no-wrap
+msgid "*{if \"feature1\" or \"feature2\":true}*"
+msgstr "*{if \"özellik1\" or \"özellik2\":true}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:119
+msgid ""
+"If \"feature1\" or \"feature2\" is defined, replace this operator with "
+"string \"true\", otherwise with an empty string."
+msgstr ""
+"\"özellik1\" veya \"özellik2\" tanımlıysa bu işlemi \"true\" dizgesiyle, "
+"değilse boş dizgeyle değiştir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:120
+#, no-wrap
+msgid "*{if not \"feature\":true|false}*"
+msgstr "*{if not \"özellik\":true|false}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:123
+msgid ""
+"If \"feature\" is not defined, replace this operator with string \"true\", "
+"otherwise with string \"false\"."
+msgstr ""
+"\"özellik\" tanımlıysa bu işlemi \"false\" dizgesiyle, değilse \"true\" "
+"dizgesiyle değiştir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:124
+#, no-wrap
+msgid "*{if not \"feature\":true}*"
+msgstr "*{if not \"özellik\":true}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:127
+msgid ""
+"If \"feature\" is not defined, replace this operator with string \"true\", "
+"otherwise with an empty string."
+msgstr ""
+"\"özellik\" tanımlıysa bu işlemi boş dizgeyle, değilse \"true\" dizgesiyle "
+"değiştir."
+
+#. type: Labeled list
+#: src/man/authselect-profiles.5.adoc:128
+#, no-wrap
+msgid "*{if \"feature1\" and (\"feature2\" or \"feature3\"):true}*"
+msgstr "*{if \"özellik1\" and (\"özellik2\" or \"özellik3\"):true}*"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:131
+msgid ""
+"If \"feature1\" is defined, and one of \"feature2\" and \"feature3\" is "
+"defined replace this operator with string \"true\", otherwise with an empty "
+"string."
+msgstr ""
+"\"özellik1\" tanımlıysa, ve \"özellik2\" ile \"özellik3\" özelliklerinden "
+"bir tanesi tanımlıysa bu işlemi \"true\" dizgesiyle, değilse boş dizgeyle "
+"değiştir."
+
+#. type: Title ~
+#: src/man/authselect-profiles.5.adoc:133
+#, no-wrap
+msgid "EXAMPLE"
+msgstr "ÖRNEK"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:136
+msgid ""
+"Here is an example of using \"if\" operator. If \"with-sudo\" feature is "
+"enabled, it will add \"sss\" to sudoers line."
+msgstr ""
+"Aşağıda \"if\" işleminin kullanımına bir örnek verilmiştir. Bu, \"with-"
+"sudo\" özelliği etkinse sudoers satırına \"sss\" ekleyecektir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:143
+#, no-wrap
+msgid ""
+"  passwd:     sss files\n"
+"  group:      sss files\n"
+"  netgroup:   sss files\n"
+"  automount:  sss files\n"
+"  services:   sss files\n"
+"  sudoers:    files {if \"with-sudo\":sss}\n"
+msgstr ""
+"  passwd:     sss files\n"
+"  group:      sss files\n"
+"  netgroup:   sss files\n"
+"  automount:  sss files\n"
+"  services:   sss files\n"
+"  sudoers:    files {if \"with-sudo\":sss}\n"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:148
+msgid ""
+"Here is an example of \"continue-if\" and \"include-if\" operators. The "
+"resulting file will be empty unless \"with-smartcard\" feature is enabled. "
+"If it is enabled and also \"with-faillock\" feature is enabled, it will also "
+"enable support for pam_faillock."
+msgstr ""
+"Aşağıda \"continue-if\" ve \"include-if\" işlemlerine bir örnek verilmiştir. "
+"\"with-smartcard\" özelliği etkinleştirilmediği sürece, sonuç olarak elde "
+"edilecek dosya boş olacaktır. Etkinleştirilirse ve ayrıca \"with-faillock\" "
+"özelliği de etkinse, pam_faillock desteğini de etkinleştirecektir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:161
+#, no-wrap
+msgid ""
+"  {continue if \"with-smartcard\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        required                                     pam_faillock.so preauth silent deny=4 unlock_time=1200 {include if \"with-faillock\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so\n"
+"  auth        sufficient                                   pam_unix.so nullok\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_faillock.so authfail deny=4 unlock_time=1200       {include if \"with-faillock\"}\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+msgstr ""
+"  {continue if \"with-smartcard\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        required                                     pam_faillock.so preauth silent deny=4 unlock_time=1200 {include if \"with-faillock\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so\n"
+"  auth        sufficient                                   pam_unix.so nullok\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_faillock.so authfail deny=4 unlock_time=1200       {include if \"with-faillock\"}\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:166
+msgid ""
+"Here is an example of \"continue-if\" using logical expression. The file "
+"will be empty unless \"with-smartcard\" or \"with-smartcard-required\" is "
+"set. This will simplify the call of _authselect select_ command which does "
+"not have to include both features but only \"with-smartcard-required\" is "
+"necessary."
+msgstr ""
+"Aşağıda mantıksal ifade kullanan bir \"continue-if\" örneği verilmiştir. "
+"\"with-smartcard\" veya \"with-smartcard-required\" ayarlanmadığı sürece "
+"dosya boş olacaktır. Bu, her iki özelliği de içermesi gerekmeyen, yalnızca "
+"\"with-smartcard-required\" özelliğinin gerekli olduğu _authselect select_ "
+"komutunun çağrılmasını kolaylaştıracaktır."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:179
+#, no-wrap
+msgid ""
+"  {continue if \"with-smartcard\" or \"with-smartcard-required\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        required                                     pam_faillock.so preauth silent deny=4 unlock_time=1200 {include if \"with-faillock\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so\n"
+"  auth        sufficient                                   pam_unix.so nullok\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_faillock.so authfail deny=4 unlock_time=1200       {include if \"with-faillock\"}\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+msgstr ""
+"  {continue if \"with-smartcard\" or \"with-smartcard-required\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        required                                     pam_faillock.so preauth silent deny=4 unlock_time=1200 {include if \"with-faillock\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so\n"
+"  auth        sufficient                                   pam_unix.so nullok\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_faillock.so authfail deny=4 unlock_time=1200       {include if \"with-faillock\"}\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:184
+msgid ""
+"Here is an example of \"imply-if\" operator. Enabling feature \"with-"
+"smartcard-required\" will also enable \"with-smartcard\" to make sure that "
+"all relevant PAM modules are used. This will achieve the same behavior as "
+"the previous example."
+msgstr ""
+"Aşağıda \"imply-if\" işlemine bir örnek verilmiştir. \"with-smartcard-"
+"required\" özelliğini etkinleştirmek, ilgili tüm PAM modüllerinin "
+"kullanıldığından emin olmak için \"with-smartcard\" özelliğini de "
+"etkinleştirecektir. Bu, önceki örnekle aynı davranışı sağlayacaktır."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:199
+#, no-wrap
+msgid ""
+"  {imply \"with-smartcard\" if \"with-smartcard-required\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        [success=1 default=ignore]                   pam_succeed_if.so service notin login:gdm:xdm:kdm:kde:xscreensaver:gnome-screensaver:kscreensaver quiet use_uid {include if \"with-smartcard-required\"}\n"
+"  auth        [success=done ignore=ignore default=die]     pam_sss.so require_cert_auth ignore_authinfo_unavail             {include if \"with-smartcard-required\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so                                                 {exclude if \"with-smartcard\"}\n"
+"  auth        [default=2 ignore=ignore success=ok]         pam_localuser.so                                                 {include if \"with-smartcard\"}\n"
+"  auth        [success=done authinfo_unavail=ignore user_unknown=ignore ignore=ignore default=die] pam_sss.so try_cert_auth {include if \"with-smartcard\"}\n"
+"  auth        sufficient                                   pam_unix.so {if not \"without-nullok\":nullok}\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+msgstr ""
+"  {imply \"with-smartcard\" if \"with-smartcard-required\"}\n"
+"  auth        required                                     pam_env.so\n"
+"  auth        required                                     pam_faildelay.so delay=2000000\n"
+"  auth        [success=1 default=ignore]                   pam_succeed_if.so service notin login:gdm:xdm:kdm:kde:xscreensaver:gnome-screensaver:kscreensaver quiet use_uid {include if \"with-smartcard-required\"}\n"
+"  auth        [success=done ignore=ignore default=die]     pam_sss.so require_cert_auth ignore_authinfo_unavail             {include if \"with-smartcard-required\"}\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if.so uid >= 1000 quiet\n"
+"  auth        [default=1 ignore=ignore success=ok]         pam_localuser.so                                                 {exclude if \"with-smartcard\"}\n"
+"  auth        [default=2 ignore=ignore success=ok]         pam_localuser.so                                                 {include if \"with-smartcard\"}\n"
+"  auth        [success=done authinfo_unavail=ignore user_unknown=ignore ignore=ignore default=die] pam_sss.so try_cert_auth {include if \"with-smartcard\"}\n"
+"  auth        sufficient                                   pam_unix.so {if not \"without-nullok\":nullok}\n"
+"  auth        requisite                                    pam_succeed_if.so uid >= 1000 quiet_success\n"
+"  auth        sufficient                                   pam_sss.so forward_pass\n"
+"  auth        required                                     pam_deny.so\n"
+"  ...\n"
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:201
+#, no-wrap
+msgid "CREATING A NEW PROFILE"
+msgstr "YENİ BİR PROFİL OLUŞTURMA"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:206
+msgid ""
+"To register a new profile within authselect, create a directory in one of "
+"the authselect profile locations with the files listed above. Not all of the "
+"files must be present, only *README* is mandatory. Other files can be "
+"created on per-need basis."
+msgstr ""
+"Authselect içinde yeni bir profil kaydetmek için, authselect profil "
+"konumlarından birinde yukarıda listelenen dosyaları içeren bir dizin "
+"oluşturun. Dosyaların hepsinin bulunması zorunlu değildir, yalnızca *README* "
+"dosyası zorunludur. Diğer dosyalar ihtiyaca göre oluşturulabilir."
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:210
+msgid ""
+"You may find *authselect create-profile* command helpful when creating new "
+"profile. See *authselect(8)* manual page or *authselect create-profile --"
+"help* for more information."
+msgstr ""
+"Yeni bir profil oluştururken *authselect create-profile* komutu faydalı "
+"olabilir. Daha fazla bilgi için *authselect(8)* kılavuz sayfasına bakın veya "
+"*authselect create-profile --help* komutunu kullanın."
+
+#. type: Title -
+#: src/man/authselect-profiles.5.adoc:212
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "AYRICA BAKIN"
+
+#. type: Plain text
+#: src/man/authselect-profiles.5.adoc:213
+msgid "authselect(8), nsswitch.conf(5), PAM(8)"
+msgstr "authselect(8), nsswitch.conf(5), PAM(8)"
+
+#, no-wrap
+#~ msgid ""
+#~ "    Name Service Switch configuration file. Only maps relevant to the profile\n"
+#~ "    must be set. Maps that are not specified by the profile are included from\n"
+#~ "    {AUTHSELECT_CONFIG_DIR}/user-nsswitch.conf.\n"
+#~ msgstr ""
+#~ "    Name Service Switch yapılandırma dosyası. Yalnızca profille ilgili\n"
+#~ "    eşleşmeler ayarlanmalıdır. Profil tarafından belirtilmeyen eşleşmeler\n"
+#~ "    {AUTHSELECT_CONFIG_DIR}/user-nsswitch.conf dosyasından eklenir.\n"
+
+#~ msgid "    Name Service Switch configuration file.\n"
+#~ msgstr "    Name Service Switch yapılandırma dosyası.\n"
+
+#~ msgid ""
+#~ "  {imply \"with-smartcard\" if \"with-smartcard-required\"}\n"
+#~ "  auth        required                                     pam_env.so\n"
+#~ "  auth        required                                     pam_faildelay."
+#~ "so delay=2000000\n"
+#~ "  auth        [success=1 default=ignore]                   pam_succeed_if."
+#~ "so service notin login:gdm:xdm:kdm:kde:xscreensaver:gnome-screensaver:"
+#~ "kscreensaver quiet use_uid {include if \"with-smartcard-required\"}\n"
+#~ "  auth        [success=done ignore=ignore default=die]     pam_sss.so "
+#~ "require_cert_auth ignore_authinfo_unavail   {include if \"with-smartcard-"
+#~ "required\"}\n"
+#~ "  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if."
+#~ "so uid >= 1000 quiet\n"
+#~ "  auth        [default=1 ignore=ignore success=ok]         pam_localuser."
+#~ "so                                       {exclude if \"with-smartcard\"}\n"
+#~ "  auth        [default=2 ignore=ignore success=ok]         pam_localuser."
+#~ "so                                       {include if \"with-smartcard\"}\n"
+#~ "  auth        [success=done authinfo_unavail=ignore ignore=ignore "
+#~ "default=die] pam_sss.so try_cert_auth           {include if \"with-"
+#~ "smartcard\"}\n"
+#~ "  auth        sufficient                                   pam_unix.so "
+#~ "{if not \"without-nullok\":nullok}\n"
+#~ "  auth        requisite                                    pam_succeed_if."
+#~ "so uid >= 1000 quiet_success\n"
+#~ "  auth        sufficient                                   pam_sss.so "
+#~ "forward_pass\n"
+#~ "  auth        required                                     pam_deny.so\n"
+#~ "  ...\n"
+#~ msgstr ""
+#~ "  {imply \"with-smartcard\" if \"with-smartcard-required\"}\n"
+#~ "  auth        required                                     pam_env.so\n"
+#~ "  auth        required                                     pam_faildelay."
+#~ "so delay=2000000\n"
+#~ "  auth        [success=1 default=ignore]                   pam_succeed_if."
+#~ "so service notin login:gdm:xdm:kdm:kde:xscreensaver:gnome-screensaver:"
+#~ "kscreensaver quiet use_uid {include if \"with-smartcard-required\"}\n"
+#~ "  auth        [success=done ignore=ignore default=die]     pam_sss.so "
+#~ "require_cert_auth ignore_authinfo_unavail   {include if \"with-smartcard-"
+#~ "required\"}\n"
+#~ "  auth        [default=1 ignore=ignore success=ok]         pam_succeed_if."
+#~ "so uid >= 1000 quiet\n"
+#~ "  auth        [default=1 ignore=ignore success=ok]         pam_localuser."
+#~ "so                                       {exclude if \"with-smartcard\"}\n"
+#~ "  auth        [default=2 ignore=ignore success=ok]         pam_localuser."
+#~ "so                                       {include if \"with-smartcard\"}\n"
+#~ "  auth        [success=done authinfo_unavail=ignore ignore=ignore "
+#~ "default=die] pam_sss.so try_cert_auth           {include if \"with-"
+#~ "smartcard\"}\n"
+#~ "  auth        sufficient                                   pam_unix.so "
+#~ "{if not \"without-nullok\":nullok}\n"
+#~ "  auth        requisite                                    pam_succeed_if."
+#~ "so uid >= 1000 quiet_success\n"
+#~ "  auth        sufficient                                   pam_sss.so "
+#~ "forward_pass\n"
+#~ "  auth        required                                     pam_deny.so\n"
+#~ "  ...\n"

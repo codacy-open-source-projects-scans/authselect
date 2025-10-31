@@ -1,0 +1,1683 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the authselect package.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2021, 2022, 2024.
+# Ricky Tigg <ricky.tigg@gmail.com>, 2022, 2024, 2025.
+# Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: authselect 1.2.2\n"
+"Report-Msgid-Bugs-To: https://github.com/authselect/authselect\n"
+"POT-Creation-Date: 2025-07-31 10:54+0200\n"
+"PO-Revision-Date: 2025-07-22 11:53+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
+"authselect/master-application/fi/>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12.2\n"
+
+#: src/lib/authselect.c:47 src/lib/authselect.c:188
+msgid "Unable to obtain supported features"
+msgstr "Tuettuja ominaisuuksia ei voi hakea"
+
+#: src/lib/authselect.c:59
+#, c-format
+msgid "Unknown profile feature [%s], did you mean [%s]?"
+msgstr "Tuntematon profiilitoiminto [%s], tarkoititko [%s]?"
+
+#: src/lib/authselect.c:62
+#, c-format
+msgid "Unknown profile feature [%s]"
+msgstr "Tuntematon profiilitoiminto [%s]"
+
+#: src/lib/authselect.c:86
+#, c-format
+msgid "Trying to activate profile [%s]"
+msgstr "Yritetään aktivoida profiili [%s]"
+
+#: src/lib/authselect.c:90 src/lib/authselect.c:181 src/lib/profiles/read.c:316
+#, c-format
+msgid "Unable to find profile [%s] [%d]: %s"
+msgstr "Ei löydy profiilia [%s] [%d]: %s"
+
+#: src/lib/authselect.c:101
+msgid "Enforcing activation!"
+msgstr "Pakotetaan aktivointi!"
+
+#: src/lib/authselect.c:110
+#, c-format
+msgid ""
+"%s is missing or unreadable, system was not properly configured by "
+"authselect."
+msgstr ""
+"%s puuttuu tai sitä ei voi lukea, authselect ei ole määrittänyt järjestelmää "
+"oikein."
+
+#: src/lib/authselect.c:112
+msgid "Refusing to activate profile unless overwrite is requested."
+msgstr "Kieltäydytään aktivoimasta profiilia, ellei sen korvausta pyydetä."
+
+#: src/lib/authselect.c:118
+msgid ""
+"Changes to the authselect configuration were detected. These changes will be "
+"overwritten. Please call 'authselect opt-out' in order to keep them."
+msgstr ""
+"Authselect-määrityksessä havaittiin muutoksia. Nämä muutokset korvataan. Aja "
+"komento \"authselect opt-out\" säilyttääksesi ne."
+
+#: src/lib/authselect.c:127
+#, c-format
+msgid "Unable to activate profile [%s] [%d]: %s"
+msgstr "Profiilia [%s] [%d] ei voida aktivoida: %s"
+
+#: src/lib/authselect.c:141
+msgid "Trying to uninstall authselect configuration"
+msgstr "Yritetään poistaa authselect-kokoonpanoa"
+
+#: src/lib/authselect.c:145
+#, c-format
+msgid "Unable to remove symlinks [%d]: %s"
+msgstr "Sym-linkkejä [%d] ei voi poistaa: %s"
+
+#: src/lib/authselect.c:149
+msgid "Symbolic links were successfully removed"
+msgstr "Symboliset linkit poistettiin onnistuneesti"
+
+#: src/lib/authselect.c:154
+#, c-format
+msgid "Unable to remove authselect configuration [%d]: %s"
+msgstr "Authselect-kokoonpanon [%d] asennusta ei voi poistaa: %s"
+
+#: src/lib/authselect.c:159
+msgid "Authselect configuration was successfully removed"
+msgstr "Authselect määritykset poistettiin"
+
+#: src/lib/authselect.c:198
+#, c-format
+msgid "Profile feature [%s] is no longer supported, removing it..."
+msgstr "Profiiliominaisuutta [%s] ei enää tueta, poistetaan se ..."
+
+#: src/lib/authselect_backup.c:48
+#, c-format
+msgid "Unable to create backup directory [%s/%s] [%d]: %s"
+msgstr "Varmuuskopiohakemistoa [%s/%s] [%d] ei voi luoda: %s"
+
+#: src/lib/authselect_backup.c:71
+#, c-format
+msgid "Unable to create backup directory [%s] [%d]: %s"
+msgstr "Varmuuskopiohakemistoa ei voi luoda [%s] [%d]: %s"
+
+#: src/lib/authselect_backup.c:92
+#, c-format
+msgid "Creating temporary directory at [%s]"
+msgstr "Luodaan tilapäinen hakemisto [%s]:hen"
+
+#: src/lib/authselect_backup.c:125 src/lib/authselect_profile.c:377
+#: src/lib/authselect_profile.c:457
+#, c-format
+msgid "There is no filename in [%s]"
+msgstr "Kohteessa ei ole tiedostonimeä [%s]"
+
+#: src/lib/authselect_backup.c:129
+#, c-format
+msgid "Copying [%s] to [%s/%s]"
+msgstr "Kopioidaan [%s] kohteeseen [%s/%s]"
+
+#: src/lib/authselect_backup.c:133 src/lib/util/selinux.c:393
+#, c-format
+msgid "File [%s] does not exist"
+msgstr "Tiedostoa [%s] ei ole olemassa"
+
+#: src/lib/authselect_backup.c:135 src/lib/authselect_backup.c:152
+#, c-format
+msgid "Unable to copy [%s] to [%s/%s] [%d]: %s"
+msgstr "Ei voi kopioida [%s] kohteeseen [%s/%s] [%d]:%s"
+
+#: src/lib/authselect_backup.c:175
+#, c-format
+msgid "Trying to backup authselect configuration to [%s]"
+msgstr "Yritetään varmuuskopioida authselectin kokoonpano [%s]:iin"
+
+#: src/lib/authselect_backup.c:180
+#, c-format
+msgid "Trying to backup system configuration to [%s]"
+msgstr "Yritetään varmuuskopioida järjestelmän kokoonpano kohteeseen [%s]"
+
+#: src/lib/authselect_backup.c:185
+#, c-format
+msgid "Backup was successfully created at [%s]"
+msgstr "Varmuuskopiointi luotiin onnistuneesti osoitteeseen [%s]"
+
+#: src/lib/authselect_backup.c:189
+#, c-format
+msgid "Unable to create backup [%d]: %s"
+msgstr "Varmuuskopion luominen epäonnistui [ %d]: %s"
+
+#: src/lib/authselect_backup.c:206
+msgid " does not exist."
+msgstr " ei ole olemassa."
+
+#: src/lib/authselect_backup.c:209 src/lib/profiles/list.c:50
+#, c-format
+msgid "Unable to list directory [%s] [%d]: %s"
+msgstr "Hakemistoa [%s] [%d]:%s ei voi luetella"
+
+#: src/lib/authselect_backup.c:223
+#, c-format
+msgid "Removing backup [%s]"
+msgstr "Poistetaan varmuuskopio [%s]"
+
+#: src/lib/authselect_backup.c:232
+#, c-format
+msgid "Unable to delete directory [%s] [%d]: %s"
+msgstr "Hakemiston [%s] poistaminen epäonnistui [%d]:%s"
+
+#: src/lib/authselect_backup.c:305
+#, c-format
+msgid "Unable to copy files [%d]: %s"
+msgstr "Tiedostojen kopioiminen epäonnistui [%d]: %s"
+
+#: src/lib/authselect_backup.c:311 src/lib/profiles/activate.c:78
+#, c-format
+msgid "Unable to create symbolic links [%d]: %s"
+msgstr "Symbolisia linkkejä ei voi luoda [ %d]: %s"
+
+#: src/lib/authselect_backup.c:317 src/lib/profiles/activate.c:84
+msgid "Dconf is not installed on your system"
+msgstr "Dconf ei ole asennettu järjestelmääsi"
+
+#: src/lib/authselect_backup.c:319 src/lib/profiles/activate.c:86
+#, c-format
+msgid "Unable to update dconf database [%d]: %s"
+msgstr "Ei voi päivittää dconf -tietokantaa [ %d]: %s"
+
+#: src/lib/authselect_backup.c:342
+#, c-format
+msgid "Restoring configuration from backup [%s]"
+msgstr "Palautetaan määritystä varmuuskopiosta [%s]"
+
+#: src/lib/authselect_backup.c:358
+#, c-format
+msgid "Backup [%s] contains authselect configuration"
+msgstr "Varmuuskopio [%s] sisältää authselect-määritykset"
+
+#: src/lib/authselect_backup.c:361
+#, c-format
+msgid "Backup [%s] contains non-authselect configuration"
+msgstr "Varmuuskopio [%s] sisältää ei-authselect-määritykset"
+
+#: src/lib/authselect_backup.c:367
+#, c-format
+msgid "Unable to restore [%s] [%d]: %s"
+msgstr "Ei pysty palauttamaan [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:104
+msgid "Unable to generate nsswitch.conf"
+msgstr "Tiedostoa nsswitch.conf ei voi luoda"
+
+#: src/lib/authselect_profile.c:111
+#, c-format
+msgid "Unable to find nsswitch maps [%d]: %s"
+msgstr "Nsswitch-karttoja ei löydy [%d]: %s"
+
+#: src/lib/authselect_profile.c:132
+msgid "Unable to create array (out of memory)"
+msgstr "Ei voida luoda taulukkoa (muisti lopussa)"
+
+#: src/lib/authselect_profile.c:141 src/lib/authselect_profile.c:150
+msgid "Unable to obtain feature list (out of memory)"
+msgstr "Ominaisuusluetteloa ei saada (muisti loppu)"
+
+#: src/lib/authselect_profile.c:344
+#, c-format
+msgid "Creating empty profile at [%s]"
+msgstr "Luodaan tyhjää profiilia [%s]"
+
+#: src/lib/authselect_profile.c:348 src/lib/authselect_profile.c:449
+#, c-format
+msgid "Unable to make path [%s] [%d]: %s"
+msgstr "Ei pysty luomaan polkua [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:355 src/lib/authselect_profile.c:408
+#, c-format
+msgid "Unable to write to [%s] [%d]: %s"
+msgstr "Ei pysty kirjoittamaan kohteeseen [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:385
+#, c-format
+msgid "Omitting [%s] since it does not exist in base profile"
+msgstr "[%s] jätetään pois, koska sitä ei ole perusprofiilissa"
+
+#: src/lib/authselect_profile.c:389
+#, c-format
+msgid "Unable to check presence of [%s] [%d]: %s"
+msgstr "Ei pysty tarkistamaan onko olemassa kohdetta [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:397
+#, c-format
+msgid "Unable to create symbolic link [%s] to [%s] [%d]: %s"
+msgstr "Symbolisia linkkejä ei voi luoda [%s] kohteeseen [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:430
+#, c-format
+msgid "Creating new profile from \"%s\" at [%s]"
+msgstr "Luodaan uutta profiilia kohteesta \"%s\" osoitteessa [%s]"
+
+#: src/lib/authselect_profile.c:434
+#, c-format
+msgid "Unable to read base profile [%s] [%d]: %s"
+msgstr "Perusprofiilin luku epäonnistui [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:442
+msgid "Unable to resolve symbolic links names"
+msgstr "Symbolisten linkkien nimiä ei voida ratkaista"
+
+#: src/lib/authselect_profile.c:467 src/lib/authselect_profile.c:480
+#: src/lib/authselect_profile.c:494
+#, c-format
+msgid "Unable to create [%s] [%d]: %s"
+msgstr "Ei pysty luomaan [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:502
+#, c-format
+msgid "Unknown file name [%s]"
+msgstr "Tuntematon tiedostonimi [%s]"
+
+#: src/lib/authselect_profile.c:529
+msgid "Name can not be empty"
+msgstr "Nimi ei voi olla tyhjä"
+
+#: src/lib/authselect_profile.c:541
+msgid "Default profile can not be created"
+msgstr "Oletusprofiilia ei voi luoda"
+
+#: src/lib/authselect_profile.c:544
+msgid "Value AUTHSELECT_PROFILE_ANY is invalid in this context"
+msgstr "Arvo AUTHSELECT_PROFILE_ANY on virheellinen tässä yhteydessä"
+
+#: src/lib/authselect_profile.c:549
+msgid "Unable to create profile path: out of memory"
+msgstr "Profiilipolkua ei voi luoda: muisti loppu"
+
+#: src/lib/authselect_profile.c:555
+#, fuzzy, c-format
+#| msgid "Profile \"%s\" already exist at [%s]"
+msgid "Profile \"%s\" already exists at [%s]"
+msgstr "Profiili \"%s\" on jo olemassa osoitteessa [%s]"
+
+#: src/lib/authselect_profile.c:559
+#, c-format
+msgid "Unable to access [%s] [%d]: %s"
+msgstr "Ei pysty pääsemään [%s] [%d]: %s"
+
+#: src/lib/authselect_profile.c:565
+msgid "Unable to create file name: out of memory"
+msgstr "Tiedostonimeä ei voi luoda: muisti loppu"
+
+#: src/lib/authselect_profile.c:573
+#, c-format
+msgid "Unable to create empty profile [%d]: %s"
+msgstr "Tyhjän profiilin luonti epäonnistui [%d]: %s"
+
+#: src/lib/authselect_profile.c:582
+#, c-format
+msgid "Unable to create profile [%d]: %s"
+msgstr "Profiilin luonti epäonnistui [%d]: %s"
+
+#: src/lib/files/config.c:152
+msgid "Checking if all required directories are writable."
+msgstr "Tarkistetaan, ovatko kaikki vaaditut hakemistot kirjoitettavissa."
+
+#: src/lib/files/config.c:157
+#, c-format
+msgid "Unable to get path to %s parent directory!"
+msgstr "Ei saada polkua %s-emohakemistoon!"
+
+#: src/lib/files/config.c:164
+#, c-format
+msgid "Creating path [%s]"
+msgstr "Luodaan polkua [%s]"
+
+#: src/lib/files/config.c:168
+#, c-format
+msgid "Unable to create path [%s] [%d]: %s"
+msgstr "Ei pysty luomaan polkua [%s] [%d]: %s"
+
+#: src/lib/files/config.c:173
+#, c-format
+msgid "Directory [%s] does not exist, please create it!"
+msgstr "Hakemistoa [%s] ei ole olemassa, luo se!"
+
+#: src/lib/files/config.c:176
+#, c-format
+msgid "Unable to access directory [%s] in [WX] mode!"
+msgstr "Ei voida käyttää hakemistoa [%s] [WX]-tilassa!"
+
+#: src/lib/files/config.c:195
+#, c-format
+msgid "Unable to load profile [%s] [%d]: %s"
+msgstr "Profiilin lataus epäonnistui [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:41
+#, c-format
+msgid "Creating symbolic link [%s] to [%s]"
+msgstr "Luodaan symbolinen linkki [%s] kohteeseen [%s]"
+
+#: src/lib/files/symlinks.c:47
+#, c-format
+msgid "Unable to overwrite file [%s] [%d]: %s"
+msgstr "Ei pysty ylikirjoittamaan tiedostoa [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:55
+#, c-format
+msgid "Unable to create symbolic link [%s] [%d]: %s"
+msgstr "Symbolisia linkkejä ei voi luoda [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:79
+#, c-format
+msgid "Validating link [%s]"
+msgstr "Vahvistetaan linkkiä [%s]"
+
+#: src/lib/files/symlinks.c:83
+#, c-format
+msgid "Unable to validate link [%s] [%d]: %s"
+msgstr "Ei pysty vahvistamaan linkkiä [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:90
+#, c-format
+msgid "[%s] was not created by authselect!"
+msgstr "[%s] ei luotu authselectillä!"
+
+#: src/lib/files/symlinks.c:112 src/lib/files/symlinks.c:153
+#: src/lib/files/system.c:309
+#, c-format
+msgid "Error while trying to access file [%s] [%d]: %s"
+msgstr "Virhe yritettäessä käyttää tiedostoa [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:121
+#, c-format
+msgid "Unable to check file [%s] [%d]: %s"
+msgstr "Ei pysty tarkistamaan tiedostoa [%s] [%d]: %s"
+
+#: src/lib/files/symlinks.c:128
+#, c-format
+msgid "Symbolic link [%s] to [%s] still exists!"
+msgstr "Symbolinen linkki [%s] kohteeseen [%s] on edelleen olemassa!"
+
+#: src/lib/files/symlinks.c:149
+#, c-format
+msgid "File [%s] exists but it needs to be overwritten!"
+msgstr "Tiedosto [%s] on olemassa, mutta se on korvattava!"
+
+#: src/lib/files/symlinks.c:190
+#, c-format
+msgid "Skipping [%s] because it is not an authselect file"
+msgstr "Ohitetaan [%s], koska se ei ole authselect-tiedosto"
+
+#: src/lib/files/system.c:73 src/lib/profiles/read.c:162
+#, c-format
+msgid "Reading file [%s/%s]"
+msgstr "Luetaan tiedostoa [%s/%s]"
+
+#: src/lib/files/system.c:81 src/lib/profiles/read.c:168
+#: src/lib/profiles/read.c:173
+#, c-format
+msgid "Unable to read file [%s/%s] [%d]: %s"
+msgstr "Ei pysty lukemaan tiedostoa [%s/%s] [%d]: %s"
+
+#: src/lib/files/system.c:149
+#, c-format
+msgid "Unable to generate files [%d]: %s"
+msgstr "Ei voida luoda tiedostoja [%d]: %s"
+
+#: src/lib/files/system.c:163 src/lib/util/selinux.c:398
+#, c-format
+msgid "Writing temporary file for [%s]"
+msgstr "Kirjoitetaan väliaikaista tiedostoa kohteelle [%s]"
+
+#: src/lib/files/system.c:166
+#, c-format
+msgid "Unable to write temporary file [%s] [%d]: %s"
+msgstr "Väliaikaista tiedostoa [%s] [%d] ei voi kirjoittaa: %s"
+
+#: src/lib/files/system.c:171
+#, c-format
+msgid "Temporary file is named [%s]"
+msgstr "Väliaikainen tiedosto on nimeltään [%s]"
+
+#: src/lib/files/system.c:182 src/lib/util/selinux.c:425
+#, c-format
+msgid "Renaming [%s] to [%s]"
+msgstr "Nimetään [%s] uudelleen nimeksi [%s]"
+
+#: src/lib/files/system.c:187 src/lib/util/selinux.c:429
+#, c-format
+msgid "Unable to rename [%s] to [%s] [%d]: %s"
+msgstr "Ei voida nimetä [%s] uudelleen nimeksi [%s] [%d]: %s"
+
+#: src/lib/files/system.c:261
+#, c-format
+msgid "Validating file [%s]"
+msgstr "Vahvistetaan tiedostoa [%s]"
+
+#: src/lib/files/system.c:266
+#, c-format
+msgid "Unable to check file mode of [%s] [%d]: %s"
+msgstr "Ei pysty tarkistamaan tiedoston tilaa [%s] [%d]: %s"
+
+#: src/lib/files/system.c:286
+#, c-format
+msgid "File [%s] was modified outside authselect!"
+msgstr "Tiedostoa [%s] on muokattu authselectin ulkopuolella!"
+
+#: src/lib/files/system.c:305
+#, c-format
+msgid "File [%s] is still present"
+msgstr "Tiedosto [%s] on edelleen olemassa"
+
+#: src/lib/files/system.c:330 src/lib/files/system.c:340
+#, c-format
+msgid "Unable to delete [%s] [%d]: %s"
+msgstr "Ei pysty luomaan [%s] [%d]: %s"
+
+#: src/lib/profiles/activate.c:44
+#, c-format
+msgid "%s update failed: %d"
+msgstr "%s päivitys epäonnistui: %d"
+
+#: src/lib/profiles/activate.c:59
+msgid "Some directories are not accessible by authselect!"
+msgstr "Jotkin hakemistot eivät ole käytettävissä authselectillä!"
+
+#: src/lib/profiles/activate.c:65
+#, c-format
+msgid "Unable to write generated system files [%d]: %s"
+msgstr "Luotuja järjestelmätiedostoja [%d] ei voi kirjoittaa: %s"
+
+#: src/lib/profiles/activate.c:72
+#, c-format
+msgid "Unable to write configuration [%d]: %s"
+msgstr "Kokoonpanoa ei voi kirjoittaa [%d]: %s"
+
+#: src/lib/profiles/list.c:42
+#, c-format
+msgid "Reading profile directory [%s]"
+msgstr "Lukee profiilihakemistoa [%s]"
+
+#: src/lib/profiles/list.c:47
+#, c-format
+msgid "Directory [%s] is missing!"
+msgstr "Hakemisto [%s] puuttuu!"
+
+#: src/lib/profiles/list.c:69
+#, c-format
+msgid "Found profile [%s]"
+msgstr "Löytyi profiili [%s]"
+
+#: src/lib/profiles/list.c:151
+#, c-format
+msgid "Unable to list profiles [%d]: %s"
+msgstr "Profiilien listaus epäonnistui [%d]: %s"
+
+#: src/lib/profiles/read.c:83
+#, c-format
+msgid "Unable to open directory [%s] [%d]: %s"
+msgstr "Hakemistoa [%s] [%d]:%s ei voi avata"
+
+#: src/lib/profiles/read.c:106
+#, c-format
+msgid "Looking up profile [%s]"
+msgstr "Etsitään profiilia [%s]"
+
+#: src/lib/profiles/read.c:110
+msgid "Locations array is NULL"
+msgstr "Locations-taulukko on NULL"
+
+#: src/lib/profiles/read.c:133
+#, c-format
+msgid "Profile [%s] is a custom profile"
+msgstr "Profiili [%s] on mukautettu profiili"
+
+#: src/lib/profiles/read.c:135
+#, c-format
+msgid "Profile [%s] is a vendor profile"
+msgstr "Profiili [%s] on toimittajaprofiili"
+
+#: src/lib/profiles/read.c:137
+#, c-format
+msgid "Profile [%s] is a default profile"
+msgstr "Profiili [%s] on oletusprofiili"
+
+#: src/lib/profiles/read.c:140
+#, c-format
+msgid "Profile [%s] found at [%s]"
+msgstr "Profiili [%s] löydetty paikasta [%s]"
+
+#: src/lib/profiles/read.c:148
+#, c-format
+msgid "Profile [%s] was not found"
+msgstr "Profiilia [%s] ei löytynyt"
+
+#: src/lib/profiles/read.c:203 src/lib/profiles/read.c:222
+#, c-format
+msgid "Profile [%s] does not contain a name in [%s]!"
+msgstr "Profiili [%s] ei sisällä nimeä osassa [%s]!"
+
+#: src/lib/util/dir.c:77 src/lib/util/dir.c:83
+#, c-format
+msgid "Unable to get basename of [%s]"
+msgstr "Ei voida saada kantanimeä kohteelle [%s]"
+
+#: src/lib/util/dir.c:90 src/lib/util/dir.c:97 src/lib/util/file.c:126
+#: src/lib/util/file.c:199 src/cli/main.c:872
+#, c-format
+msgid "Unable to stat [%s] [%d]: %s"
+msgstr "Ei pysty saamaan tilaa [%s] [%d]: %s"
+
+#: src/lib/util/dir.c:130
+#, c-format
+msgid "Unable to stat directory [%d]: %s"
+msgstr "Hakemiston [%d] tilastointi ei voitu tehdä: %s"
+
+#: src/lib/util/dir.c:313
+#, c-format
+msgid "Removing file [%s/%s]"
+msgstr "Poistetaan tiedosto [%s/%s]"
+
+#: src/lib/util/dir.c:321
+#, c-format
+msgid "Removing directory [%s]"
+msgstr "Poistetaan kansiota [%s]"
+
+#: src/lib/util/file.c:43
+msgid "Internal error: stat cannot be NULL!"
+msgstr "Sisäinen virhe: stat ei voi olla NULL!"
+
+#: src/lib/util/file.c:51
+#, c-format
+msgid "[%s] is not a directory!"
+msgstr "[%s] ei ole hakemisto!"
+
+#: src/lib/util/file.c:54
+#, c-format
+msgid "[%s] is not a regular file!"
+msgstr "[%s] ei ole tavallinen tiedosto!"
+
+#: src/lib/util/file.c:57
+#, c-format
+msgid "[%s] is not a symbolic link!"
+msgstr "[%s] ei ole symbolinen linkki!"
+
+#: src/lib/util/file.c:60
+#, c-format
+msgid "[%s] has wrong type [%.7o], expected [%.7o]!"
+msgstr "[%s] on väärää tyyppiä [%.7o], odotettiin [%.7o]!"
+
+#: src/lib/util/file.c:87
+#, c-format
+msgid "[%s] has wrong mode [%.4o], expected [%.4o]!"
+msgstr "[%s] on väärä tila [%.4o], odotettiin [%.4o]!"
+
+#: src/lib/util/file.c:93
+#, c-format
+msgid "[%s] has wrong owner [%u], expected [%u]!"
+msgstr "[%s] on väärä omistaja [%u], odotettiin [%u]!"
+
+#: src/lib/util/file.c:99
+#, c-format
+msgid "[%s] has wrong group [%u], expected [%u]!"
+msgstr "[%s] on väärä ryhmä [%u], odotettiin [%u]!"
+
+#: src/lib/util/file.c:121
+#, c-format
+msgid "[%s] does not exist!"
+msgstr "[%s] ei ole olemassa!"
+
+#: src/lib/util/file.c:164 src/lib/util/file.c:211
+#, c-format
+msgid "Unable to read link destination [%s] [%d]: %s"
+msgstr "Ei voida lukea linkin kohdetta [%s] [%d]: %s"
+
+#: src/lib/util/file.c:170
+#, c-format
+msgid "Link [%s] does not point to [%s]"
+msgstr "Linkki [%s] ei osoita kohteeseen [%s]"
+
+#: src/lib/util/file.c:218 src/lib/util/file.c:220
+#, c-format
+msgid "Link [%s] points to [%s]"
+msgstr "Linkki [%s] osoittaa kohteeseen [%s]"
+
+#: src/lib/util/file.c:281
+msgid "Internal error: filepath cannot be NULL!"
+msgstr "Sisäinen virhe: tiedostopolku ei voi olla NULL!"
+
+#: src/lib/util/file.c:313
+#, c-format
+msgid "Unable to get parent directory of [%s] [%d]: %s"
+msgstr "Ei voida hakea ylähakemistoa [%s] [%d]: %s"
+
+#: src/lib/util/file.c:524 src/lib/util/textfile.c:175
+#, c-format
+msgid "Unable to chmod file [%s] [%d]: %s"
+msgstr "Ei pysty ajamaan chmod tiedostolle [%s] [%d]: %s"
+
+#: src/lib/util/file.c:531
+#, c-format
+msgid "Unable to chown file [%s] [%d]: %s"
+msgstr "Ei pysty ajamaan chmod tiedostolle [%s] [%d]: %s"
+
+#: src/lib/util/selinux.c:46
+#, c-format
+msgid "Unable to create selabel handle [%d]: %s"
+msgstr "Selabel-kahvaa [%d] ei voida luoda: %s"
+
+#: src/lib/util/selinux.c:55
+#, c-format
+msgid "Unable to lookup selinux context [%d]: %s"
+msgstr "Selinux-kontekstia [%d] ei voi etsiä: %s"
+
+#: src/lib/util/selinux.c:59
+#, c-format
+msgid "Found default selinux context for [%s]: %s"
+msgstr "Löytyi oletus selinux-konteksti kohteelle [%s]: %s"
+
+#: src/lib/util/selinux.c:84
+#, c-format
+msgid "Unable to obtain selinux context for [%s] [%d]: %s"
+msgstr "Selinux-kontekstia ei voida hakea kohteelle [%s] [%d]: %s"
+
+#: src/lib/util/selinux.c:91
+msgid "not set"
+msgstr "ei asetettu"
+
+#: src/lib/util/selinux.c:90
+#, c-format
+msgid "Found selinux context for [%s]: %s"
+msgstr "Löytyi selinux-konteksti kohteelle [%s]: %s"
+
+#: src/lib/util/selinux.c:115 src/lib/util/selinux.c:183
+#: src/lib/util/selinux.c:251
+msgid "Unable to get current fscreate selinux context!"
+msgstr "Nykyistä fscreate selinux -kontekstia ei voi hakea!"
+
+#: src/lib/util/selinux.c:121 src/lib/util/selinux.c:189
+#: src/lib/util/selinux.c:257
+#, c-format
+msgid "Unable to get default selinux context for [%s] [%d]: %s!"
+msgstr "Oletus selinux-kontekstia ei voida hakea kohteelle [%s] [%d]: %s!"
+
+#: src/lib/util/selinux.c:129 src/lib/util/selinux.c:197
+#: src/lib/util/selinux.c:265
+msgid "Unable to set fscreate selinux context!"
+msgstr "Nykyistä fscreate selinux -kontekstia ei voi asettaa!"
+
+#: src/lib/util/selinux.c:139 src/lib/util/selinux.c:207
+#: src/lib/util/selinux.c:275
+msgid "Unable to restore fscreate selinux context!"
+msgstr "Nykyistä fscreate selinux -kontekstia ei voi palauttaa!"
+
+#: src/lib/util/selinux.c:387
+#, c-format
+msgid ""
+"File [%s] should exist but is missing. It is not safe to delete [%s]. "
+"Aborting."
+msgstr ""
+"Tiedoston [%s] pitäisi olla olemassa, mutta se puuttuu. Ei ole turvallista "
+"poistaa [%s]. Keskeytetään."
+
+#: src/lib/util/selinux.c:420
+#, c-format
+msgid "Removing [%s]"
+msgstr "Poistetaan [%s]"
+
+#: src/lib/util/template.c:143 src/lib/util/template.c:205
+#: src/lib/util/template.c:281
+msgid "Invalid operator!"
+msgstr "Virheellinen operaattori!"
+
+#: src/lib/util/template.c:450 src/lib/util/template.c:573
+#: src/lib/util/template.c:624
+#, c-format
+msgid "Unable to compile regular expression: regex error %d"
+msgstr "Säännöllisen lausekkeen kääntäminen epäonnistui: regex-virhe %d"
+
+#: src/lib/util/template.c:460 src/lib/util/template.c:634
+#, c-format
+msgid "Unable to process match [%d]: %s"
+msgstr "Löytöä [%d] ei voida käsitellä: %s"
+
+#: src/lib/util/template.c:485
+#, c-format
+msgid "Unable to process operator [%d]: %s"
+msgstr "Henkilöoperaattoria [%d] ei voida käsitellä: %s"
+
+#: src/lib/util/template.c:500 src/lib/util/template.c:650
+#, c-format
+msgid "Unable to search string: regex error %d"
+msgstr "Ei voida etsiä merkkijonoa: regex-virhe %d"
+
+#: src/lib/util/template.c:532
+#, c-format
+msgid "Unable to generate template [%d]: %s"
+msgstr "Mallia [%d] ei voida luoda: %s"
+
+#: src/lib/util/template.c:580
+#, c-format
+msgid "Unable to find new match: regex error %d"
+msgstr "Uutta vastaavuutta ei löydy: regex-virhe %d"
+
+#: src/lib/util/template.c:705
+#, c-format
+msgid "Unable to create temporary file for [%s] [%d]: %s"
+msgstr "Ei voida luoda väliaikaista tiedostoa kohteelle [%s] [%d]: %s"
+
+#: src/lib/util/textfile.c:56
+#, c-format
+msgid "File [%s] is bigger than %uKiB!"
+msgstr "Tiedosto [%s] on suurempi kuin %uKiB!"
+
+#: src/lib/util/textfile.c:85
+#, c-format
+msgid "Unable to read file [%s] [%d]: %s"
+msgstr "Ei pysty lukemaan tiedostoa [%s] [%d]: %s"
+
+#: src/lib/util/textfile.c:158
+#, c-format
+msgid "Unable to open file [%s] [%d]: %s"
+msgstr "Ei pysty avaamaan tiedostoa [%s] [%d]: %s"
+
+#: src/lib/util/textfile.c:167
+#, c-format
+msgid "Unable to write data [%s] [%d]: %s"
+msgstr "Ei pysty kirjoittamaan tietoa [%s] [%d]: %s"
+
+#: src/cli/cli_tool.c:72
+#, c-format
+msgid "Common options:\n"
+msgstr "Yleisasetukset:\n"
+
+#: src/cli/cli_tool.c:74 src/cli/cli_tool.c:96
+msgid "Print error messages"
+msgstr "Tulosta virheilmoitukset"
+
+#: src/cli/cli_tool.c:76 src/cli/cli_tool.c:97
+msgid "Print trace messages"
+msgstr "Tulosta jäljitysviestit"
+
+#: src/cli/cli_tool.c:78 src/cli/cli_tool.c:98
+msgid "Print warning messages"
+msgstr "Tulosta varoitusviestit"
+
+#: src/cli/cli_tool.c:80
+#, c-format
+msgid "Help options:\n"
+msgstr "Ohjevalitsimet:\n"
+
+#: src/cli/cli_tool.c:82
+msgid "Show this for a command"
+msgstr "Näytä tämä komentoa varten"
+
+#: src/cli/cli_tool.c:84
+msgid "Show brief usage message for a command"
+msgstr "Näytä komennon lyhyt käyttöohje"
+
+#: src/cli/cli_tool.c:173
+#, c-format
+msgid ""
+"Usage:\n"
+"%s COMMAND COMMAND-ARGS\n"
+"\n"
+msgstr ""
+"Käyttö:\n"
+"%s COMMAND COMMAND-ARGS\n"
+"\n"
+
+#: src/cli/cli_tool.c:174
+#, c-format
+msgid "Available commands:\n"
+msgstr "Käytettävissä olevat komennot:\n"
+
+#: src/cli/cli_tool.c:196
+#, c-format
+msgid "\n"
+msgstr "\n"
+
+#: src/cli/cli_tool.c:230
+#, c-format
+msgid "Authselect command '%s' can only be run as root!\n"
+msgstr "Authselect-komento '%s' voidaan suorittaa vain root-käyttäjänä!\n"
+
+#: src/cli/cli_tool.c:247
+msgid "Bug: commands can't be NULL!\n"
+msgstr "Virhe: komennot eivät voi olla NULL!\n"
+
+#: src/cli/cli_tool.c:310
+msgid "Command options:"
+msgstr "Komentovaihtoehdot:"
+
+#: src/cli/cli_tool.c:312
+msgid "Common options:"
+msgstr "Yleisasetukset:"
+
+#: src/cli/cli_tool.c:331 src/cli/cli_tool.c:334
+msgid "[OPTIONS...]"
+msgstr "[VALITSIN...]"
+
+#: src/cli/cli_tool.c:337 src/cli/cli_tool.c:389 src/cli/main.c:864
+msgid "Out of memory!"
+msgstr "Muisti loppui!"
+
+#: src/cli/cli_tool.c:358
+#, c-format
+msgid ""
+"Invalid option %s: %s\n"
+"\n"
+msgstr ""
+"Virheellinen vaihtoehto %s: %s\n"
+"\n"
+
+#: src/cli/cli_tool.c:370
+#, c-format
+msgid ""
+"Missing option: %s\n"
+"\n"
+msgstr ""
+"Puuttuva vaihtoehto: %s\n"
+"\n"
+
+#: src/cli/cli_tool.c:380
+#, c-format
+msgid ""
+"Only one free argument is expected!\n"
+"\n"
+msgstr ""
+"Vain yksi vapaa argumentti halutaan!\n"
+"\n"
+
+#: src/cli/cli_tool.c:395
+#, c-format
+msgid ""
+"Unexpected parameter: %s\n"
+"\n"
+msgstr ""
+"Odottamaton parametri: %s\n"
+"\n"
+
+#: src/cli/cli_tool.c:407
+#, c-format
+msgid ""
+"At least one option is required!\n"
+"\n"
+msgstr ""
+"Vähintään yksi vaihtoehto vaaditaan!\n"
+"\n"
+
+#: src/cli/main.c:76 src/cli/main.c:432 src/cli/main.c:475
+msgid "Profile identifier."
+msgstr "Profiilin tunniste."
+
+#: src/cli/main.c:79 src/cli/main.c:248 src/cli/main.c:293 src/cli/main.c:342
+#: src/cli/main.c:390 src/cli/main.c:435 src/cli/main.c:478 src/cli/main.c:651
+#: src/cli/main.c:728 src/cli/main.c:757 src/cli/main.c:799 src/cli/main.c:839
+#: src/cli/main.c:904 src/cli/main.c:930
+msgid "Unable to parse command arguments"
+msgstr "Komennon argumentteja ei voi jäsentää"
+
+#: src/cli/main.c:135
+msgid "Unable to backup current configuration!\n"
+msgstr "Nykyistä kokoonpanoa ei voi varmuuskopioida!\n"
+
+#: src/cli/main.c:139
+#, c-format
+msgid "Backup stored at %s\n"
+msgstr "Varmuuskopio tallennettu osoitteeseen %s\n"
+
+#: src/cli/main.c:161
+msgid "Enforce changes"
+msgstr "Pane muutokset voimaan"
+
+#: src/cli/main.c:162 src/cli/main.c:241 src/cli/main.c:641 src/cli/main.c:719
+msgid "Backup system files before activating profile (generate unique name)"
+msgstr ""
+"Varmuuskopioi järjestelmätiedostot ennen profiilin aktivointia (luo "
+"yksilöllinen nimi)"
+
+#: src/cli/main.c:163 src/cli/main.c:242 src/cli/main.c:642 src/cli/main.c:720
+msgid "Backup system files before activating profile"
+msgstr "Varmuuskopioi järjestelmätiedostot ennen profiilin aktivointia"
+
+#: src/cli/main.c:163 src/cli/main.c:242 src/cli/main.c:642 src/cli/main.c:720
+msgid "NAME"
+msgstr "NIMI"
+
+#: src/cli/main.c:164
+msgid "Do not backup system files when --force is set"
+msgstr "Älä varmuuskopioi järjestelmätiedostoja, kun --force on asetettu"
+
+#: src/cli/main.c:165 src/cli/main.c:643
+msgid "Do not print profile requirements"
+msgstr "Älä tulosta profiilivaatimuksia"
+
+#: src/cli/main.c:176 src/cli/main.c:405 src/cli/main.c:441 src/cli/main.c:484
+#: src/cli/main.c:516 src/cli/main.c:670
+#, c-format
+msgid "Unable to get profile information [%d]: %s"
+msgstr "Profiilitietoja ei saada [%d]: %s"
+
+#: src/cli/main.c:184 src/cli/main.c:524 src/cli/main.c:678
+msgid "Unable to read profile requirements!"
+msgstr "Profiilivaatimuksia ei voi lukea!"
+
+#: src/cli/main.c:198
+msgid ""
+"\n"
+"Some unexpected changes to the configuration were detected.\n"
+"Use --force parameter if you want to overwrite these changes.\n"
+msgstr ""
+"\n"
+"Joitakin odottamattomia muutoksia kokoonpanoon havaittiin.\n"
+"Käytä parametria --force, jos haluat korvata nämä muutokset.\n"
+
+#: src/cli/main.c:203
+#, c-format
+msgid "Unable to activate profile [%d]: %s\n"
+msgstr "Profiilin aktivointi epäonnistui [%d]: %s\n"
+
+#: src/cli/main.c:208
+#, c-format
+msgid "Profile \"%s\" was selected.\n"
+msgstr "Profiili \"%s\" valittiin.\n"
+
+#: src/cli/main.c:211
+msgid "The following nsswitch maps are overwritten by the profile:\n"
+msgstr "Profiili korvaa seuraavat nsswitch-kartat:\n"
+
+#: src/cli/main.c:214
+#, c-format
+msgid "- %s\n"
+msgstr "- %s\n"
+
+#: src/cli/main.c:219
+#, c-format
+msgid ""
+"\n"
+"%s\n"
+msgstr ""
+"\n"
+"%s\n"
+
+#: src/cli/main.c:260
+msgid "Changes were successfully applied.\n"
+msgstr "Muutokset otettiin käyttöön.\n"
+
+#: src/cli/main.c:263 src/cli/main.c:299 src/cli/main.c:660
+msgid "No existing configuration detected.\n"
+msgstr "Olemassa olevaa kokoonpanoa ei havaittu.\n"
+
+#: src/cli/main.c:266
+msgid ""
+"Some unexpected changes to the configuration were detected. Use 'select' "
+"command instead.\n"
+msgstr ""
+"Joitakin odottamattomia muutoksia kokoonpanoon havaittiin. Käytä sen sijaan "
+"komentoa 'select'.\n"
+
+#: src/cli/main.c:270
+#, c-format
+msgid "Unable to apply changes [%d]: %s\n"
+msgstr "Muutoksia [%d] ei voi ottaa käyttöön: %s\n"
+
+#: src/cli/main.c:287
+msgid "Print command parameters instead of formatted output"
+msgstr "Tulosta komentoparametrit muotoillun tulosteen sijaan"
+
+#: src/cli/main.c:302 src/cli/main.c:663
+#, c-format
+msgid "Unable to get current configuration [%d]: %s"
+msgstr "Nykyistä kokoonpanoa ei voi hakea [%d]: %s"
+
+#: src/cli/main.c:316
+#, c-format
+msgid "Profile ID: %s\n"
+msgstr "Profiilin tunnus: %s\n"
+
+#: src/cli/main.c:317
+msgid "Enabled features:"
+msgstr "Käytössä olevat ominaisuudet:"
+
+#: src/cli/main.c:320
+msgid " None\n"
+msgstr " Ei mitään\n"
+
+#: src/cli/main.c:348
+#, c-format
+msgid "Unable to test current configuration [%d]: %s"
+msgstr "Nykyistä kokoonpanoa ei voi testata [%d]: %s"
+
+#: src/cli/main.c:355
+msgid ""
+"Current configuration is not valid. It was probably modified outside "
+"authselect."
+msgstr ""
+"Nykyinen kokoonpano ei kelpaa. Sitä on luultavasti muokattu authselectin "
+"ulkopuolella."
+
+#: src/cli/main.c:362
+msgid "Current configuration is valid."
+msgstr "Nykyinen kokoonpano kelpaa."
+
+#: src/cli/main.c:365
+msgid "No configuration detected."
+msgstr "Olemassa olevaa kokoonpanoa ei havaittu."
+
+#: src/cli/main.c:369
+msgid "System was not configured with authselect."
+msgstr "Järjestelmää ei ole määritetty authselectillä."
+
+#: src/cli/main.c:396
+msgid "Unable to get profile list!"
+msgstr "Profiililuetteloa ei voi saada!"
+
+#: src/cli/main.c:449
+#, c-format
+msgid "Unable to get profile features [%d]: %s"
+msgstr "Profiiliominaisuuksia [%d] ei saada: %s"
+
+#: src/cli/main.c:563
+msgid "Print content of all files"
+msgstr "Tulosta kaikkien tiedostojen sisältö"
+
+#: src/cli/main.c:564
+msgid "Print nsswitch.conf content"
+msgstr "Tulosta nsswitch.conf-sisältö"
+
+#: src/cli/main.c:565
+msgid "Print system-auth content"
+msgstr "Tulosta järjestelmätodennussisältö"
+
+#: src/cli/main.c:566
+msgid "Print password-auth content"
+msgstr "Tulosta salasanatodennuksen sisältö"
+
+#: src/cli/main.c:567
+msgid "Print smartcard-auth content"
+msgstr "Tulosta älykorttitodennuksen sisältöä"
+
+#: src/cli/main.c:568
+msgid "Print fingerprint-auth content"
+msgstr "Tulosta sormenjälkitunnistuksen sisältöä"
+
+#: src/cli/main.c:569
+msgid "Print postlogin content"
+msgstr "Tulosta sisäänkirjautumisen jälkeinen sisältö"
+
+#: src/cli/main.c:570
+msgid "Print dconf database content"
+msgstr "Tulosta dconf-tietokannan sisältö"
+
+#: src/cli/main.c:571
+msgid "Print dconf lock content"
+msgstr "Tulosta dconfin lukituksen sisältö"
+
+#: src/cli/main.c:598
+#, c-format
+msgid "Unable to get generated content [%d]: %s"
+msgstr "Luotua sisältöä [%d] ei saada: %s"
+
+#: src/cli/main.c:617
+#, c-format
+msgid ""
+"File %s: Empty\n"
+"\n"
+msgstr ""
+"Tiedosto %s: Tyhjä\n"
+"\n"
+
+#: src/cli/main.c:619
+#, c-format
+msgid ""
+"File %s:\n"
+"%s\n"
+"\n"
+msgstr ""
+"Tiedosto %s: \n"
+"%s\n"
+"\n"
+
+#: src/cli/main.c:648
+msgid "Feature to enable."
+msgstr "Käyttöön otettava ominaisuus."
+
+#: src/cli/main.c:685
+#, c-format
+msgid "Unable to backup current configuration [%d]: %s\n"
+msgstr "Nykyistä kokoonpanoa ei voi varmuuskopioida [%d]: %s\n"
+
+#: src/cli/main.c:692
+#, c-format
+msgid "Unable to enable feature [%d]: %s\n"
+msgstr "Ominaisuutta [%d] ei voi ottaa käyttöön: %s\n"
+
+#: src/cli/main.c:697
+#, c-format
+msgid "%s\n"
+msgstr "%s\n"
+
+#: src/cli/main.c:725
+msgid "Feature to disable."
+msgstr "Käytöstä poistettava ominaisuus."
+
+#: src/cli/main.c:739
+#, c-format
+msgid "Unable to disable feature [%d]: %s\n"
+msgstr "Ominaisuutta [%d] ei voi poistaa käytöstä: %s\n"
+
+#: src/cli/main.c:754
+#, fuzzy
+#| msgid "Feature to enable."
+msgid "Feature to check."
+msgstr "Käyttöön otettava ominaisuus."
+
+#: src/cli/main.c:763
+#, fuzzy, c-format
+#| msgid "Unable to enable feature [%d]: %s\n"
+msgid "Unable to check feature [%d]: %s\n"
+msgstr "Ominaisuutta [%d] ei voi ottaa käyttöön: %s\n"
+
+#: src/cli/main.c:784
+msgid "Create new profile as a vendor profile instead of a custom profile"
+msgstr "Luo uusi profiili toimittajaprofiiliksi mukautetun profiilin sijaan"
+
+#: src/cli/main.c:785
+msgid "ID of a profile that should be used as a base for the new profile"
+msgstr "Profiilin tunnus, jota tulisi käyttää uuden profiilin perustana"
+
+#: src/cli/main.c:786
+msgid ""
+"Base new profile on a default profile even if vendor profile with the same "
+"name exists"
+msgstr ""
+"Perusta uusi profiili oletusprofiiliin, vaikka samanniminen "
+"toimittajaprofiili olisi olemassa"
+
+#: src/cli/main.c:787
+msgid "Symlink meta files from the base profile instead of copying them"
+msgstr "Sym-linkitä metatiedostot perusprofiilista kopioimisen sijaan"
+
+#: src/cli/main.c:788
+msgid "Symlink nsswitch files from the base profile instead of copying them"
+msgstr "Sym-linkitä nsswitch -tiedostot perusprofiilista kopioimisen sijaan"
+
+#: src/cli/main.c:789
+msgid "Symlink pam files from the base profile instead of copying them"
+msgstr "Sym-linkitä pam-tiedostot perusprofiilista kopioimisen sijaan"
+
+#: src/cli/main.c:790
+msgid "Symlink dconf files from the base profile instead of copying them"
+msgstr "Sym-linkitä dconf -tiedostot perusprofiilista kopioimisen sijaan"
+
+#: src/cli/main.c:791
+msgid "Symlink specific file (can be set multiple times)"
+msgstr "Sym-linkitä tietty tiedosto (voidaan asettaa useita kertoja)"
+
+#: src/cli/main.c:796
+msgid "New profile name."
+msgstr "Uusi profiilinimi."
+
+#: src/cli/main.c:806
+#, c-format
+msgid "Unable to create new profile [%d]: %s\n"
+msgstr "Uuden profiilin luonti epäonnistui [%d]: %s\n"
+
+#: src/cli/main.c:810
+#, c-format
+msgid "New profile was created at %s\n"
+msgstr "Uusi profiili luotiin %s:een\n"
+
+#: src/cli/main.c:833
+msgid "Print backup names without any formatting and additional information"
+msgstr "Tulosta varmuuskopioitujen nimet ilman muotoiluja ja lisätietoja"
+
+#: src/cli/main.c:845
+msgid "Unable to list available backups!"
+msgstr "Ei voida luetella saatavilla olevia varmuuskopioita!"
+
+#: src/cli/main.c:882
+#, c-format
+msgid "%-*s (created at %s)\n"
+msgstr "%-*s (luotu %s:ssa)\n"
+
+#: src/cli/main.c:901
+msgid "Name of the backup to remove."
+msgstr "Poistettavan varmuuskopion nimi."
+
+#: src/cli/main.c:910
+#, c-format
+msgid "Unable to remove backup [%s] [%d]: %s\n"
+msgstr "Varmuuskopiota [%s] [%d] ei voida poistaa: %s\n"
+
+#: src/cli/main.c:927
+msgid "Name of the backup to restore from."
+msgstr "Varmuuskopion nimi, josta palautetaan."
+
+#: src/cli/main.c:936
+#, c-format
+msgid "Unable to restore backup [%s] [%d]: %s\n"
+msgstr "Varmuuskopiota [%s] [%d] ei voida palauttaa: %s\n"
+
+#: src/cli/main.c:952
+#, c-format
+msgid "Unable to uninstall authselect configuration [%d]: %s\n"
+msgstr "Authselect-kokoonpanon [%d] asennusta ei voi poistaa: %s\n"
+
+#: src/cli/main.c:1002
+msgid "Select profile"
+msgstr "Valitse profiili"
+
+#: src/cli/main.c:1003
+msgid "Regenerate configuration for currently selected command"
+msgstr "Luo uudelleen tällä hetkellä valitun komennon asetukset"
+
+#: src/cli/main.c:1004
+msgid "List available profiles"
+msgstr "Luettele saattavilla olevat profiilit"
+
+#: src/cli/main.c:1005
+msgid "List available profile features"
+msgstr "Luettele saattavilla olevat profiiliominaisuudet"
+
+#: src/cli/main.c:1006
+msgid "Show profile information"
+msgstr "Näytä profiilitiedot"
+
+#: src/cli/main.c:1007
+msgid "Print profile requirements"
+msgstr "Tulosta profiilivaatimukset"
+
+#: src/cli/main.c:1008
+msgid "Get identifier of currently selected profile"
+msgstr "Hanki tällä hetkellä valitun profiilin tunniste"
+
+#: src/cli/main.c:1009
+msgid "Check if the current configuration is valid"
+msgstr "Tarkista, onko nykyinen kokoonpano kelvollinen"
+
+#: src/cli/main.c:1010
+msgid "Print changes that would be otherwise written"
+msgstr "Tulosta muutokset, jotka muutoin kirjoitetaan"
+
+#: src/cli/main.c:1011
+msgid "Enable feature in currently selected profile"
+msgstr "Ota ominaisuus käyttöön nykyisessä valitussa profiilissa"
+
+#: src/cli/main.c:1012
+msgid "Disable feature in currently selected profile"
+msgstr "Poista ominaisuus käytöstä nykyisessä valitussa profiilissa"
+
+#: src/cli/main.c:1013
+#, fuzzy
+#| msgid "Enable feature in currently selected profile"
+msgid "Check if feature is enabled in currently selected profile"
+msgstr "Ota ominaisuus käyttöön nykyisessä valitussa profiilissa"
+
+#: src/cli/main.c:1014
+msgid "Create new authselect profile"
+msgstr "Luo uusi authselect-profiili"
+
+#: src/cli/main.c:1015
+msgid "Backup commands:"
+msgstr "Varmuuskopio komennot:"
+
+#: src/cli/main.c:1016
+msgid "List available backups"
+msgstr "Listaa saattavilla olevat varmuuskopiot"
+
+#: src/cli/main.c:1017
+msgid "Remove backup"
+msgstr "Poista varmuuskopio"
+
+#: src/cli/main.c:1018
+msgid "Restore from backup"
+msgstr "Palauta varmuuskopiosta"
+
+#: src/cli/main.c:1019
+msgid "Other:"
+msgstr "Muuta:"
+
+#: src/cli/main.c:1020
+msgid "Opt-out from authselect managed configuration"
+msgstr "Kieltäydy authselect hallinnoiduista määrityksistä"
+
+#: src/cli/main.c:1022
+msgid "Print authselect version"
+msgstr "Tulosta authselectin versio"
+
+#~ msgid "Unable to obtain nsswitch maps!"
+#~ msgstr "Nsswitch-karttoja ei voi saada!"
+
+#~ msgid "NIS for user information by default"
+#~ msgstr "NIS oletuksena käyttäjätiedoille"
+
+#~ msgid "<domain>"
+#~ msgstr "<toimialue>"
+
+#~ msgid "default NIS domain"
+#~ msgstr "oletusarvoinen NIS-toimialue"
+
+#~ msgid "<server>"
+#~ msgstr "<palvelin>"
+
+#~ msgid "default NIS server"
+#~ msgstr "oletusarvoinen NIS-palvelin"
+
+#~ msgid "LDAP for user information by default"
+#~ msgstr "LDAP käyttäjätiedoille oletuksena"
+
+#~ msgid "LDAP for authentication by default"
+#~ msgstr "LDAP todennusta varten oletuksena"
+
+#~ msgid "default LDAP server hostname or URI"
+#~ msgstr "oletusarvoinen LDAP-palvelimen isäntänimi tai URI"
+
+#~ msgid "<dn>"
+#~ msgstr "<toimialueen nimi>"
+
+#~ msgid "default LDAP base DN"
+#~ msgstr "oletusarvoinen LDAP-perustoimialueen nimi"
+
+#~ msgid "use of TLS with LDAP (RFC-2830)"
+#~ msgstr "TLS:n käyttö LDAP:n kanssa (RFC-2830)"
+
+#~ msgid "use of TLS for identity lookups with LDAP (RFC-2830)"
+#~ msgstr "TLS:n käyttö identiteettihakuihin LDAP:n avulla (RFC-2830)"
+
+#~ msgid "use of RFC-2307bis schema for LDAP user information lookups"
+#~ msgstr "RFC-2307bis-skeeman käyttö LDAP-käyttäjätietojen hauissa"
+
+#~ msgid "authentication with smart card by default"
+#~ msgstr "todennus älykortilla oletuksena"
+
+#~ msgid "<0=Lock|1=Ignore>"
+#~ msgstr "<0=Lukitse|1=Ohita>"
+
+#~ msgid "action to be taken on smart card removal"
+#~ msgstr "suoritettavat toimet älykortin poistamiseksi"
+
+#~ msgid "require smart card for authentication by default"
+#~ msgstr "oletuksena vaatii älykortin todentamista varten"
+
+#~ msgid "authentication with fingerprint readers by default"
+#~ msgstr "todennus sormenjälkitunnistimilla oletuksena"
+
+#~ msgid "automatic per-user ecryptfs"
+#~ msgstr "automaattinen käyttäjäkohtainen ecryptfs"
+
+#~ msgid "Kerberos authentication by default"
+#~ msgstr "Kerberos-todennus oletuksena"
+
+#~ msgid "default Kerberos KDC"
+#~ msgstr "Kerberos KDC oletuksena"
+
+#~ msgid "default Kerberos admin server"
+#~ msgstr "oletuksena Kerberos-hallintapalvelin"
+
+#~ msgid "<realm>"
+#~ msgstr "<alue>"
+
+#~ msgid "default Kerberos realm"
+#~ msgstr "Kerberoksen oletusalue"
+
+#~ msgid "use of DNS to find Kerberos KDCs"
+#~ msgstr "DNS:n käyttö Kerberos KDC:iden löytämiseen"
+
+#~ msgid "use of DNS to find Kerberos realms"
+#~ msgstr "DNS:n käyttö Kerberos-alueiden löytämiseen"
+
+#~ msgid "winbind for user information by default"
+#~ msgstr "winbind käyttäjätiedoille oletuksena"
+
+#~ msgid "winbind for authentication by default"
+#~ msgstr "winbind todennusta varten oletuksena"
+
+#~ msgid "<Administrator>"
+#~ msgstr "<Ylläpitäjä>"
+
+#~ msgid "join the winbind domain or ads realm now as this administrator"
+#~ msgstr ""
+#~ "Liity winbind-toimialueeseen tai ads alueeseen nyt tämän "
+#~ "järjestelmänvalvojan roolissa"
+
+#~ msgid "Kerberos 5 for authenticate with winbind"
+#~ msgstr "Kerberos 5 todennusta varten winbindillä"
+
+#~ msgid "<workgroup>"
+#~ msgstr "<työryhmä>"
+
+#~ msgid "workgroup authentication servers are in"
+#~ msgstr "työryhmän todennuspalvelimet ovat"
+
+#~ msgid ""
+#~ "SSSD for user information by default with manually managed configuration"
+#~ msgstr ""
+#~ "SSSD käyttäjätiedoille oletuksena manuaalisesti hallitulla kokoonpanolla"
+
+#~ msgid ""
+#~ "SSSD for authentication by default with manually managed configuration"
+#~ msgstr ""
+#~ "SSSD todennusta varten oletuksena manuaalisesti hallitulla kokoonpanolla"
+
+#~ msgid "caching of user credentials in SSSD by default"
+#~ msgstr ""
+#~ "käyttäjän tunnistetietojen välimuistiin tallentaminen SSSD:lle oletuksena"
+
+#~ msgid "check of access.conf during account authorization"
+#~ msgstr "tarkista access.conf tilin valtuutuksen aikana"
+
+#~ msgid "creation of home directories for users on their first login"
+#~ msgstr ""
+#~ "kotihakemistojen luominen käyttäjille heidän ensimmäisen "
+#~ "sisäänkirjautumisen yhteydessä"
+
+#~ msgid ""
+#~ "account locking in case of too many consecutive authentication failures"
+#~ msgstr ""
+#~ "tilin lukitseminen liian monien peräkkäisten epäonnistuneiden todennusten "
+#~ "tapauksessa"
+
+#~ msgid "<number>"
+#~ msgstr "<luku>"
+
+#~ msgid "minimum length of a password"
+#~ msgstr "salasanan vähimmäispituus"
+
+#~ msgid "minimum number of character classes in a password"
+#~ msgstr "salasanan merkkiluokkien vähimmäismäärä"
+
+#~ msgid "maximum number of same consecutive characters in a password"
+#~ msgstr "enimmäismäärä samoja peräkkäisiä merkkejä salasanassa"
+
+#~ msgid "maximum number of consecutive characters of same class in a password"
+#~ msgstr "saman luokan peräkkäisten merkkien enimmäismäärä salasanassa"
+
+#~ msgid "require at least one lowercase character in a password"
+#~ msgstr "vaatii vähintään yhden pienen merkin salasanassa"
+
+#~ msgid "require at least one uppercase character in a password"
+#~ msgstr "vaatii vähintään yhden ison merkin salasanassa"
+
+#~ msgid "require at least one digit in a password"
+#~ msgstr "vaati vähintään yhden luvun salasanassa"
+
+#~ msgid "require at least one other character in a password"
+#~ msgstr "vaati vähintään yhden muun merkin salasanassa"
+
+#~ msgid "do not start/stop services"
+#~ msgstr "älä käynnistä/lopeta palveluita"
+
+#~ msgid "update all configuration files"
+#~ msgstr "päivittää kaikki asetustiedostot"
+
+#~ msgid "the same as --updateall"
+#~ msgstr "sama kuin '--updateall'"
+
+#~ msgid "<name>"
+#~ msgstr "<nimi>"
+
+#~ msgid "<descrypt|bigcrypt|md5|sha256|sha512|yescrypt>"
+#~ msgstr "<descrypt|bigcrypt|md5|sha256|sha512|yescrypt>"
+
+#~ msgid "<URL>"
+#~ msgstr "<URL>"
+
+#~ msgid "<module>"
+#~ msgstr "<moduuli>"
+
+#~ msgid "<user|server|domain|ads>"
+#~ msgstr "<käyttäjä|palvelin|toimialue|mainokset>"
+
+#~ msgid "<servers>"
+#~ msgstr "<palvelin>"
+
+#~ msgid "<lowest-highest>"
+#~ msgstr "<matalin–korkein>"
+
+#~ msgid "<\\>"
+#~ msgstr "<\\>"
+
+#~ msgid "</home/%D/%U>"
+#~ msgstr "</home/%D/%U>"
+
+#~ msgid "</bin/false>"
+#~ msgstr "</bin/false>"
+
+#~ msgid "<options>"
+#~ msgstr "<vaihtoehdot>"
+
+#~ msgid "These options have a compatibility layer"
+#~ msgstr "Näillä vaihtoehdoilla on yhteensopivuuskerros"
+
+#~ msgid "These options are no longer supported and have no effect"
+#~ msgstr "Näitä vaihtoehtoja ei enää tueta, eikä niillä ole vaikutusta"
+
+#~ msgid "enable"
+#~ msgstr "ota käyttöön"
+
+#~ msgid "disable"
+#~ msgstr "poista käytöstä"
+
+#, python-format
+#~ msgid "Executing: %s"
+#~ msgstr "Suoritetaan: %s"
+
+#, python-format
+#~ msgid "Service %s was not found. Please install the service."
+#~ msgstr "Palvelua %s ei löytynyt. Ole hyvä ja asenna palvelu."
+
+#, python-format
+#~ msgid "Command [%s] failed with %d, stderr:"
+#~ msgstr "Komento [%s] epäonnistui %d:lla, stderr:"
+
+#, python-format
+#~ msgid "Removing file: %s"
+#~ msgstr "Poistetaan tiedosto: %s"
+
+#, python-format
+#~ msgid "%s was not found. Please, install realmd."
+#~ msgstr "%s ei löytynyt. Ole hyvä ja asenna realmd."
+
+#~ msgid "Running authconfig compatibility tool."
+#~ msgstr "Suoritetaan authconfig-yhteensopivuustyökalu."
+
+#~ msgid ""
+#~ "The purpose of this tool is to enable authentication against chosen "
+#~ "services with authselect and minimum configuration. It does not provide "
+#~ "all capabilities of authconfig.\n"
+#~ msgstr ""
+#~ "Tämän työkalun tarkoituksena on mahdollistaa todennus valittuja "
+#~ "palveluita vastaan authselect- ja vähimmäiskokoonpanolla. Se ei tarjoa "
+#~ "kaikkia authconfigin ominaisuuksia.\n"
+
+#~ msgid ""
+#~ "IMPORTANT: authconfig is replaced by authselect, please update your "
+#~ "scripts."
+#~ msgstr ""
+#~ "TÄRKEÄÄ: authconfig korvataan authselectillä, ole hyvä ja päivitä "
+#~ "komentosarjasi."
+
+#~ msgid ""
+#~ "See Fedora 28 Change Page: https://fedoraproject.org/wiki/Changes/"
+#~ "AuthselectAsDefault"
+#~ msgstr ""
+#~ "Katso Fedora 28:n muutossivu: https://fedoraproject.org/wiki/Changes/"
+#~ "AuthselectAsDefault"
+
+#~ msgid ""
+#~ "See man authselect-migration(7) to help you with migration to authselect"
+#~ msgstr ""
+#~ "Katso 'man authselect-migration 7', joka auttaa sinua siirtymään "
+#~ "authselectiin"
+
+#~ msgid "Warning: These options are not supported anymore and have no effect:"
+#~ msgstr ""
+#~ "Varoitus: Näitä vaihtoehtoja ei enää tueta, eikä niillä ole vaikutusta:"
+
+#~ msgid "authconfig can only be run as root"
+#~ msgstr "authconfig voidaan suorittaa vain rootinä"
+
+#, python-format
+#~ msgid ""
+#~ "Error: option --%s is no longer supported and we cannot continue if it is "
+#~ "set."
+#~ msgstr ""
+#~ "Virhe: vaihtoehtoa -'-%s' ei enää tueta, emmekä voi jatkaa, jos se on "
+#~ "asetettu."
+
+#~ msgid "Error: Both --enablewinbind and --enablewinbindauth must be set."
+#~ msgstr ""
+#~ "Virhe: Sekä '--enablewinbind' että '--enablewinbindauth' on oltava "
+#~ "asetettuna."
+
+#~ msgid "Error: Please, provide --updateall option."
+#~ msgstr "Virhe: Ole hyvä ja anna '--updateall'."
+
+#~ msgid "Unable to get current time!"
+#~ msgstr "Nykyistä aikaa ei voi saada!"
+
+#~ msgid "Unable to create message!"
+#~ msgstr "Viestiä ei voi luoda!"
+
+#~ msgid "Unable to check configuration [%d]: %s"
+#~ msgstr "Kokoonpanoa ei voi tarkistaa [%d]: %s"
+
+#~ msgid "Unexpected changes to the configuration were detected."
+#~ msgstr "Odottamattomia muutoksia kokoonpanoon havaittiin."
+
+#~ msgid ""
+#~ "Refusing to activate profile unless those changes are removed or "
+#~ "overwrite is requested."
+#~ msgstr ""
+#~ "Kieltäydytään aktivoimasta profiilia, ellei kyseisiä muutoksia poisteta "
+#~ "tai korvaamista pyydetä."
+
+#~ msgid "File that needs to be overwritten was found"
+#~ msgstr "Korvaamista tarvitseva tiedosto löytyi"
+
+#~ msgid "Unable to read [%s] [%d]: %s"
+#~ msgstr "Ei pysty lukemaan [%s] [%d]: %s"
+
+#~ msgid "Unable to validate file [%s] [%d]: %s"
+#~ msgstr "Ei pysty vahvistamaan tiedostoa [%s] [%d]: %s"
+
+#~ msgid "Comparing content against [%s]"
+#~ msgstr "Sisällön vertaaminen [%s]:iin"
+
+#~ msgid "Comparing content against current profile"
+#~ msgstr "Sisällön vertaaminen nykyiseen profiiliin"
+
+#~ msgid "[%s] has unexpected content!"
+#~ msgstr "[%s] sisältää odottamatonta sisältöä!"

@@ -1,0 +1,28 @@
+name: "Analyze (target)"
+on:
+  pull_request_target:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  cppcheck:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+        persist-credentials: false
+
+    - name: Perform cppcheck analysis
+      uses: linuxdeepin/action-cppcheck@9ef62c4ec8cd5660952cd02c58b83fa57c16a42b
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
+        pull_request_id: ${{ github.event.pull_request.number }}
+        allow_approve: false
+        enable_checks: "warning,unusedFunction,missingInclude"
+        comment_result: false
