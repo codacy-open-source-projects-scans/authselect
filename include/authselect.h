@@ -98,15 +98,18 @@ authselect_uninstall(void);
  * and regenerate existing configuration. This can be used to apply
  * any changes to the profile templates.
  *
+ * @param upgrade        Only apply changes if installed profiles have changed.
+ *
  * @return
  * - 0 if the profile is successfully updated.
  * - EEXIST if the system is already configured by other means than
  *   authselect.
  * - ENOENT if there is no existing authselect configuration.
+ * - EAGAIN if upgrade is true and no changes are needed.
  * - Other errno code on generic error.
  */
 int
-authselect_apply_changes(void);
+authselect_apply_changes(bool upgrade);
 
 /**
  * Backup all system configuration files.
@@ -180,6 +183,19 @@ authselect_feature_enable(const char *feature);
  */
 int
 authselect_feature_disable(const char *feature);
+
+/**
+ * Check if a feature is enabled in currently activated profile.
+ *
+ * @param feature       Feature name to check.
+ *
+ * @return
+ * - 0 if the feature is enabled.
+ * - ENOENT if it is disabled or there is no existing authselect configuration.
+ * - Other errno code on generic error.
+ */
+int
+authselect_feature_enabled(const char *feature);
 
 /**
  * Check if current configuration is valid.

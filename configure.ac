@@ -15,13 +15,14 @@ m4_ifdef([AC_USE_SYSTEM_EXTENSIONS],
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 LT_INIT
 
-AC_PROG_CC_C99
+AC_PROG_CC
 AC_PROG_MKDIR_P
 AC_PROG_LN_S
 AC_PROG_SED
+AC_PATH_PROG(FIND, find, /usr/bin/find)
+AC_PATH_PROG(SHA256SUM, sha256sum, /usr/bin/sha256sum)
 AC_LANG([C])
 
-AC_HEADER_STDC
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION(0.19)
 
@@ -33,8 +34,8 @@ m4_include(src/conf_macros.m4)
 m4_include(external/a2x.m4)
 m4_include(external/po4a.m4)
 
-+dnl Check if functions are present
-+AC_CHECK_FUNCS_ONCE([reallocarray])
+dnl Check if functions are present
+AC_CHECK_FUNCS_ONCE([reallocarray])
 
 dnl Required libraries
 REQUIRE_POPT
@@ -49,6 +50,7 @@ AM_CONDITIONAL([HAVE_MANPAGES], [test ! -z "$A2X" -a ! -z "$PO4A_TRANSLATE"])
 AC_CONFIG_FILES([Makefile
                  po/Makefile.in
                  profiles/Makefile
+                 systemd/Makefile
                  rpm/authselect.spec
                  src/common/Makefile
                  src/cli/Makefile
